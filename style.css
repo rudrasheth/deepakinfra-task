@@ -1,0 +1,53 @@
+/* style.css */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+  
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+@keyframes spin-slow-reverse {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+  
+@keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+  
+.animate-float {
+    animation: float 7s ease-in-out infinite;
+}
+  
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+  
+.animate-spin-slow-reverse {
+    animation: spin-slow-reverse 25s linear infinite;
+}
+  
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism utilities */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.focus-opacity {
+    opacity: 0.9;
+}
