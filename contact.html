@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deepak Infra Engineering | IT Repair & Services</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/dielogo.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -43,19 +45,23 @@
 
     <style>
         :root {
-            --primary: #2563eb; /* Blue 600 */
+            --primary: #2563eb;
+            /* Blue 600 */
             /* Slate 900 */
             --primary-rgb: 37, 99, 235;
-            --secondary: #1e40af; /* Blue 800 */
+            --secondary: #1e40af;
+            /* Blue 800 */
             /* Slate 700 */
             --glass-bg: rgba(255, 255, 255, 0.75);
         }
 
         .dark {
-            --primary: #60a5fa; /* Blue 400 */
+            --primary: #60a5fa;
+            /* Blue 400 */
             /* Slate 50 */
             --primary-rgb: 96, 165, 250;
-            --secondary: #93c5fd; /* Blue 300 */
+            --secondary: #93c5fd;
+            /* Blue 300 */
             /* Slate 300 */
             --glass-bg: rgba(30, 41, 59, 0.85);
             color-scheme: dark;
@@ -212,7 +218,8 @@
         .service-card {
             background-color: #ffffff;
             border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 1px solid #e2e8f0;
             transition: transform 0.2s, box-shadow 0.2s;
             position: relative;
             overflow: hidden;
@@ -439,12 +446,25 @@
 
                         <div class="w-full h-px bg-slate-200 mt-6 mb-6"></div>
 
-                        <!-- Google Maps Embed -->
-                        <div class="w-full h-48 rounded-xl overflow-hidden shadow-md">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8385805728515!2d72.99723067570416!3d19.070830352219808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1341c390cb3%3A0xe526beccbfda1516!2sVashi%20Plaza!5e0!3m2!1sen!2sin!4v1709825420177!5m2!1sen!2sin"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- Google Maps Link -->
+                        <div class="w-full">
+                            <a href="https://maps.google.com/?q=Vashi+Plaza+Navi+Mumbai" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center justify-between w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Open in Google Maps
+                                        </p>
+                                        <p class="text-xs text-slate-500 font-medium">Get directions to HQ</p>
+                                    </div>
+                                </div>
+                                <i
+                                    class="fas fa-external-link-alt text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -517,7 +537,8 @@
 
 
     <!-- Rich Footer -->
-    <footer class="bg-blue-950 text-white dark:bg-slate-950 pt-16 pb-12 relative overflow-hidden border-t border-slate-800">
+    <footer
+        class="bg-blue-950 text-white dark:bg-slate-950 pt-16 pb-12 relative overflow-hidden border-t border-slate-800">
 
 
 
