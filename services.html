@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#f8fafc] dark:bg-slate-950 text-slate-800 dark:text-gray-100">
+<html lang="en" class="scroll-smooth bg-transparent dark:bg-slate-950 text-slate-800 dark:text-gray-100">
 
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,7 @@
             color: #f8fafc; 
         }
 
-        .dark .hero-bg, .dark .bg-[#f8fafc] dark:bg-slate-950, .dark section.bg-[#f8fafc] dark:bg-slate-950 { background-color: #0f172a !important; }
+        .dark .hero-bg, .dark .bg-transparent dark:bg-slate-950, .dark section.bg-transparent dark:bg-slate-950 { background-color: #0f172a !important; }
         .dark .hero-inner { background-color: rgba(15, 23, 42, 0.85) !important; }
         .dark .bg-white dark:bg-slate-900 { background-color: #1e293b !important; }
         .dark .bg-slate-50 dark:bg-slate-800 { background-color: #0f172a !important; }
@@ -83,7 +83,13 @@
         .dark .text-slate-400 { color: #64748b !important; }
         
         .dark .glass-panel { background: var(--glass-bg) !important; border-color: rgba(255,255,255,0.1) !important; }
-        .dark .service-card { background-color: #1e293b !important; color: #f8fafc !important; border-color: rgba(255,255,255,0.05) !important; }
+        .dark .service-card {
+            background-color: rgba(30, 41, 59, 0.4) !important;
+            backdrop-filter: blur(16px);
+            color: #f8fafc !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
         
         .hero-bg {
             position: relative;
@@ -156,9 +162,10 @@
             position: relative; 
             overflow: hidden; 
         }
-        .service-card:hover { 
-            transform: translateY(-12px); 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); 
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.3);
         }
 
         .service-card-icon { 
@@ -313,7 +320,7 @@
         </div>
     </section>
 
-    <section class="min-h-screen py-20 bg-[#f8fafc] dark:bg-slate-950 relative">
+    <section class="min-h-screen py-20 bg-transparent dark:bg-slate-950 relative">
         
         
 

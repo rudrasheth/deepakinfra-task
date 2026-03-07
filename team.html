@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#f8fafc] dark:bg-slate-950 text-slate-800 dark:text-gray-100">
+<html lang="en" class="scroll-smooth bg-transparent dark:bg-slate-950 text-slate-800 dark:text-gray-100">
 
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,7 @@
             color: #f8fafc; 
         }
 
-        .dark .hero-bg, .dark .bg-[#f8fafc] dark:bg-slate-950, .dark section.bg-[#f8fafc] dark:bg-slate-950 { background-color: #0f172a !important; }
+        .dark .hero-bg, .dark .bg-transparent dark:bg-slate-950, .dark section.bg-transparent dark:bg-slate-950 { background-color: #0f172a !important; }
         .dark .hero-inner { background-color: rgba(15, 23, 42, 0.85) !important; }
         .dark .bg-white dark:bg-slate-900 { background-color: #1e293b !important; }
         .dark .bg-slate-50 dark:bg-slate-800 { background-color: #0f172a !important; }
@@ -83,7 +83,13 @@
         .dark .text-slate-400 { color: #64748b !important; }
         
         .dark .glass-panel { background: var(--glass-bg) !important; border-color: rgba(255,255,255,0.1) !important; }
-        .dark .service-card { background-color: #1e293b !important; color: #f8fafc !important; border-color: rgba(255,255,255,0.05) !important; }
+        .dark .service-card {
+            background-color: rgba(30, 41, 59, 0.4) !important;
+            backdrop-filter: blur(16px);
+            color: #f8fafc !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
         
         .hero-bg {
             position: relative;
@@ -156,9 +162,10 @@
             position: relative; 
             overflow: hidden; 
         }
-        .service-card:hover { 
-            transform: translateY(-12px); 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); 
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.3);
         }
 
         .service-card-icon { 
@@ -298,7 +305,7 @@
 
     <!-- Inner Page Header -->
     <section class="pt-40 pb-20 bg-white dark:bg-slate-900 relative -b  overflow-hidden shadow-sm">
-        <div class='absolute inset-0 bg-[#f8fafc] dark:bg-slate-950 z-0'></div>
+        <div class='absolute inset-0 bg-transparent dark:bg-slate-950 z-0'></div>
         <div class="absolute inset-0 bg-white dark:bg-slate-900/60 opacity-100 backdrop-blur-md z-10"></div>
 
 
@@ -310,7 +317,7 @@
         </div>
     </section>
 
-    <section class="min-h-screen py-20 bg-[#f8fafc] dark:bg-slate-950 relative">
+    <section class="min-h-screen py-20 bg-transparent dark:bg-slate-950 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
             <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mt-10">
@@ -369,7 +376,7 @@
 
     <!-- New Section: Expertise & Operations -->
     <section class="py-20 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-700 dark:border-slate-800">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-5 dark:opacity-10 pointer-events-none z-0"></div>
+        <div class="absolute inset-0 bg-[url(\'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop\')] bg-cover bg-fixed bg-center opacity-5 dark:opacity-10 invert dark:invert-0 pointer-events-none z-0"></div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="mb-16 text-center" data-aos="fade-up">
@@ -381,25 +388,25 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Stat 1 -->
-                <div class="bg-[#f8fafc] dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
+                <div class="bg-transparent dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
                     data-aos="zoom-in" data-aos-delay="100">
                     <h4 class="text-4xl font-black text-slate-900 dark:text-white mb-2">L3</h4>
                     <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Diag Capabilities</p>
                 </div>
                 <!-- Stat 2 -->
-                <div class="bg-[#f8fafc] dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
+                <div class="bg-transparent dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
                     data-aos="zoom-in" data-aos-delay="200">
                     <h4 class="text-4xl font-black text-slate-900 dark:text-white mb-2">24/7</h4>
                     <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">SLA Readiness</p>
                 </div>
                 <!-- Stat 3 -->
-                <div class="bg-[#f8fafc] dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
+                <div class="bg-transparent dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
                     data-aos="zoom-in" data-aos-delay="300">
                     <h4 class="text-4xl font-black text-slate-900 dark:text-white mb-2">OEM</h4>
                     <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Standard Parts</p>
                 </div>
                 <!-- Stat 4 -->
-                <div class="bg-[#f8fafc] dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
+                <div class="bg-transparent dark:bg-slate-950 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 dark:border-slate-700 text-center"
                     data-aos="zoom-in" data-aos-delay="400">
                     <h4 class="text-4xl font-black text-slate-900 dark:text-white mb-2">ISO</h4>
                     <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Compliant Labs</p>

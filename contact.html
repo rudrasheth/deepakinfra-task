@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#f8fafc] dark:bg-slate-950 text-slate-800 dark:text-gray-100">
+<html lang="en" class="scroll-smooth bg-transparent dark:bg-slate-950 text-slate-800 dark:text-gray-100">
 
 <head>
     <meta charset="UTF-8">
@@ -81,8 +81,8 @@
         }
 
         .dark .hero-bg,
-        .dark .bg-[#f8fafc] dark:bg-slate-950,
-        .dark section.bg-[#f8fafc] dark:bg-slate-950 {
+        .dark .bg-transparent dark:bg-slate-950,
+        .dark section.bg-transparent dark:bg-slate-950 {
             background-color: #0f172a !important;
         }
 
@@ -128,9 +128,11 @@
         }
 
         .dark .service-card {
-            background-color: #1e293b !important;
+            background-color: rgba(30, 41, 59, 0.4) !important;
+            backdrop-filter: blur(16px);
             color: #f8fafc !important;
-            border-color: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
         .hero-bg {
@@ -226,8 +228,9 @@
         }
 
         .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.3);
         }
 
         .service-card-icon {
@@ -386,7 +389,7 @@
 
     <!-- Inner Page Header -->
     <section class="pt-40 pb-20 bg-white dark:bg-slate-900 relative -b  overflow-hidden shadow-sm">
-        <div class='absolute inset-0 bg-[#f8fafc] dark:bg-slate-950 z-0'></div>
+        <div class='absolute inset-0 bg-transparent dark:bg-slate-950 z-0'></div>
         <div class="absolute inset-0 bg-white dark:bg-slate-900/60 opacity-100 backdrop-blur-md z-10"></div>
 
 
@@ -398,7 +401,7 @@
         </div>
     </section>
 
-    <section class="min-h-screen py-20 bg-[#f8fafc] dark:bg-slate-950 relative">
+    <section class="min-h-screen py-20 bg-transparent dark:bg-slate-950 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
             <div
