@@ -357,12 +357,22 @@
             <div class="hidden md:flex space-x-10 items-center">
                 <a href="index.html" class="nav-link uppercase">Home</a>
                 <a href="about.html" class="nav-link uppercase">About</a>
-                <a href="services.html" class="nav-link uppercase">Services</a>
+                <div class="relative group">
+                    <a href="services.html" class="nav-link uppercase flex items-center gap-1">Services <i class="fas fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col py-2">
+                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Services</a>
+                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Spare & Parts</a>
+                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Repairs</a>
+                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Repair BGA</a>
+                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Data Recovery</a>
+                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Media</a>
+                    </div>
+                </div>
                 <a href="team.html" class="nav-link uppercase">Team</a>
                 <a href="contact.html" class="nav-link uppercase">Contact Us</a>
             </div>
             <div class="hidden md:flex items-center">
-                <a href="contact.html"
+                <a href="quote.html"
                     class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs shrink-0 font-bold whitespace-nowrap">Get
                     a Free Quote</a>
                 <button id="theme-toggle" onclick="toggleDarkMode()"
@@ -386,7 +396,7 @@
             <a href="services.html" class="nav-link uppercase text-center py-2">Services</a>
             <a href="team.html" class="nav-link uppercase text-center py-2">Team</a>
             <a href="contact.html" class="nav-link uppercase text-center py-2">Contact Us</a>
-            <a href="contact.html"
+            <a href="quote.html"
                 class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 py-3 text-center w-full font-bold whitespace-nowrap">Get
                 a Free Quote</a>
         </div>
@@ -418,7 +428,7 @@
                 and individuals.
             </p>
             <div data-aos="fade-up" data-aos-delay="600" class="flex flex-col sm:flex-row gap-6">
-                <a href="contact.html" class="btn-solid px-10 py-4 text-sm whitespace-nowrap"
+                <a href="quote.html" class="btn-solid px-10 py-4 text-sm whitespace-nowrap"
                     style="background-color: #fbbf24; color: #0f172a; font-weight: bold;">Get a Free Quote</a>
                 <a href="services.html"
                     class="px-10 py-4 rounded-xl   text-slate-800 dark:text-gray-100 font-bold hover:bg-slate-100 hover:-purple-300 transition-all text-sm backdrop-blur-md whitespace-nowrap flex items-center gap-3 bg-white dark:bg-slate-900/50 shadow-sm">View
@@ -560,7 +570,7 @@
             </h2>
             <p class="text-slate-500 font-medium mb-10 max-w-lg mx-auto">Get in touch with us today for reliable laptop
                 and hardware repair services.</p>
-            <a href="contact.html"
+            <a href="quote.html"
                 class="btn-solid inline-block px-12 py-5 text-sm font-bold text-white shadow-lg shadow-purple-900/10 hover:text-white">Contact
                 Us Today</a>
         </div>
@@ -597,7 +607,7 @@
                             class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
                                 class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0"></i>
                             Services</a>
-                        <a href="contact.html"
+                        <a href="quote.html"
                             class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
                                 class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0"></i>
                             Contact Us</a>
@@ -615,7 +625,7 @@
                         <p
                             class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed mb-6 relative z-10 w-full md:w-3/4">
                             Experience priority routing for enterprise-grade IT interventions and AMC setups.</p>
-                        <a href="contact.html"
+                        <a href="quote.html"
                             class="btn-solid inline-block px-8 py-3 text-xs w-max relative z-10 text-white">Contact
                             Us</a>
                     </div>
