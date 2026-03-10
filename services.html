@@ -199,7 +199,7 @@
 
         .nav-link {
             position: relative;
-            color: #64748b;
+            color: #cbd5e1;
             font-weight: 600;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
@@ -207,7 +207,7 @@
         }
 
         .nav-link:hover {
-            color: #0f172a;
+            color: #f8fafc;
         }
 
         .dark .nav-link {
@@ -346,11 +346,11 @@
     <!-- Smaller, sleeker navbar -->
     <nav class="fixed w-full z-50 top-4 transition-all duration-300 px-4 sm:px-6 lg:px-8">
         <div
-            class="max-w-6xl mx-auto bg-white dark:bg-slate-900/90 dark:bg-slate-900/90 shadow-sm backdrop-blur-md rounded-xl px-6 h-16 flex justify-between items-center transition-all">
+            class="max-w-6xl mx-auto bg-slate-900/90 shadow-sm backdrop-blur-md rounded-xl px-6 h-16 flex justify-between items-center transition-all">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="index.html">
-                    <img class="h-10 md:h-12 lg:h-16 w-auto brightness-0 dark:invert opacity-80 dark:opacity-100 hover:scale-105 transition-transform"
+                    <img class="h-10 md:h-12 lg:h-16 w-auto invert opacity-100 hover:scale-105 transition-transform"
                         src="assets/dielogo.png" alt="Logo">
                 </a>
             </div>
@@ -358,31 +358,21 @@
             <div class="hidden md:flex space-x-10 items-center">
                 <a href="index.html" class="nav-link uppercase">Home</a>
                 <a href="about.html" class="nav-link uppercase">About</a>
-                <div class="relative group">
-                    <a href="services.html" class="nav-link uppercase flex items-center gap-1">Services <i class="fas fa-chevron-down text-[10px]"></i></a>
-                    <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col py-2">
-                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Services</a>
-                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Spare & Parts</a>
-                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Repairs</a>
-                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop Repair BGA</a>
-                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Data Recovery</a>
-                        <a href="services.html" class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Media</a>
-                    </div>
-                </div>
+                <a href="services.html" class="nav-link uppercase">Services</a>
                 <a href="team.html" class="nav-link uppercase">Team</a>
                 <a href="contact.html" class="nav-link uppercase">Contact Us</a>
             </div>
             <div class="hidden md:flex items-center">
                 <a href="quote.html" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs shrink-0 font-bold whitespace-nowrap">Get a Free Quote</a>
                 <button id="theme-toggle" onclick="toggleDarkMode()"
-                    class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
+                    class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
                     <i id="theme-toggle-icon" class="fas fa-moon"></i>
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn"
-                class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -421,224 +411,254 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
             <!-- Quick Links -->
-            <div class="flex flex-wrap justify-center gap-4 mb-20" data-aos="fade-up">
-                <a href="#amc" class="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 transition-colors shadow-sm">Laptop Services</a>
-                <a href="#amc" class="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 transition-colors shadow-sm">Laptop Spare & Parts</a>
-                <a href="#amc" class="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 transition-colors shadow-sm">Laptop Repairs</a>
-                <a href="#amc" class="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 transition-colors shadow-sm">Laptop Repair BGA</a>
-                <a href="#amc" class="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 transition-colors shadow-sm">Data Recovery</a>
-                <a href="#amc" class="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 transition-colors shadow-sm">Media</a>
+            <div class="flex flex-wrap justify-center gap-4 mb-20" id="pill-nav" data-aos="fade-up">
+                <button onclick="showService('laptop')" class="service-btn active px-6 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors shadow-sm">Laptop Services</button>
+                <button onclick="showService('sales')" class="service-btn px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-blue-600 hover:text-white transition-colors shadow-sm">Hardware Sales</button>
+                <button onclick="showService('cctv')" class="service-btn px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-blue-600 hover:text-white transition-colors shadow-sm">CCTV / IP CAM Solutions</button>
+                <button onclick="showService('network')" class="service-btn px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-blue-600 hover:text-white transition-colors shadow-sm">Networking & Server</button>
+                <button onclick="showService('itad')" class="service-btn px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold hover:bg-blue-600 hover:text-white transition-colors shadow-sm">ITAD Services</button>
             </div>
 
-            <div class="flex flex-col gap-32">
-
-                <!-- AMC Service -->
-                <div class="flex flex-col lg:flex-row gap-16 items-center">
-                    <div class="lg:w-1/2 relative" data-aos="fade-right">
-                        <div
-                            class="absolute -inset-4 bg-gradient-to-r from-cyan-200 to-purple-200 rounded-md blur-xl opacity-60 z-0">
-                        </div>
-                        <div class="relative overflow-hidden rounded-md shadow-2xl group   z-10">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-transparent z-10 mix-blend-overlay">
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
-                                class="w-full h-[500px] object-cover group-hover:scale-105 transition-all duration-1000"
-                                alt="AMC Services">
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 lg:pl-10" data-aos="fade-left">
-                        <div
-                            class="inline-flex items-center justify-center w-20 h-20 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white dark:text-white mb-8   shadow-xl transform rotate-3">
-                            <i class="fas fa-file-signature text-3xl transform -rotate-3"></i>
-                        </div>
-                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
-                            Annual
-                            Maintenance Contract (AMC)</h2>
-                        <p class="text-slate-600 dark:text-gray-300 mb-10 font-medium leading-relaxed text-lg">Secure
-                            your enterprise IT
-                            infrastructure with comprehensive Annual Maintenance Contracts. We ensure your systems
-                            perform optimally with minimal downtime.</p>
-
-                        <div class="space-y-6 mb-10">
-                            <div
-                                class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md   shadow-sm group hover: dark: hover:shadow-md transition-all cursor-default">
-                                <div
-                                    class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800   flex items-center justify-center shrink-0">
-                                    <i class="fas fa-stethoscope text-slate-900 dark:text-white dark:text-white"></i>
+            <div class="flex flex-col gap-32 relative" id="service-sections">
+                <!-- 1. Laptop Services -->
+                <div id="service-laptop" class="service-section animate-fade-in-up">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="service-card p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-microchip"></i>
                                 </div>
-                                <span
-                                    class="text-slate-700 dark:text-gray-200 font-bold tracking-wide transition-colors">Preventive
-                                    Maintenance</span>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Laptop Spare Parts</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Original replacements for all major brands & tailored to your needs.</p>
                             </div>
-                            <div
-                                class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md   shadow-sm group hover: dark: hover:shadow-md transition-all cursor-default">
-                                <div
-                                    class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800   flex items-center justify-center shrink-0">
-                                    <i class="fas fa-user-shield text-slate-900 dark:text-white dark:text-white"></i>
+                            <div class="service-card p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-laptop"></i>
                                 </div>
-                                <span
-                                    class="text-slate-700 dark:text-gray-200 font-bold tracking-wide transition-colors">Dedicated
-                                    Technical Support</span>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Laptop Sales</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Premium laptops for enterprise or individual use.</p>
                             </div>
-                            <div
-                                class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md   shadow-sm group hover: dark: hover:shadow-md transition-all cursor-default">
-                                <div
-                                    class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800   flex items-center justify-center shrink-0">
-                                    <i class="fas fa-tachometer-alt text-slate-900 dark:text-white dark:text-white"></i>
+                            <div class="service-card p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-tachometer-alt"></i>
                                 </div>
-                                <span
-                                    class="text-slate-700 dark:text-gray-200 font-bold tracking-wide transition-colors">SLA-Driven
-                                    Rapid
-                                    Response</span>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Laptop Upgradation</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">RAM upgrades for enhanced performance to meet workload demands.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-hdd"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">SSD Installation</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Faster data access, reduced boot times, and responsive systems.</p>
                             </div>
                         </div>
-                        <a href="https://orarega.com/amc"
-                            class="text-slate-900 dark:text-white dark:text-white font-bold hover:text-slate-900 dark:text-white dark:text-white transition-colors"
-                            target="_blank">View
-                            AMC Program <i class="fas fa-arrow-right ml-2"></i></a>
+                        <div class="sticky top-32 lg:pl-10" data-aos="fade-left">
+                            <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Laptop Services & Upgradation</h2>
+                            <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed text-lg mb-8">We provide comprehensive laptop support, from supplying original spare parts and new laptop sales, to complete system upgradations. Enhance performance with RAM and SSD installations tailored to your workflow and requirements.</p>
+                            <a href="contact.html" class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Request Service</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Warranty Extension -->
-                <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
-                    <div class="lg:w-1/2 relative" data-aos="fade-left">
-                        <div
-                            class="absolute -inset-4 bg-gradient-to-r from-purple-200 to-cyan-200 rounded-md blur-xl opacity-60 z-0">
-                        </div>
-                        <div class="relative overflow-hidden rounded-md shadow-2xl group   z-10">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent z-10 mix-blend-overlay">
+                <!-- 2. Hardware Sales -->
+                <div id="service-sales" class="service-section hidden">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-laptop-medical"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Laptop Sales</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Latest generation laptops from leading brands for business and personal workflows.</p>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=800&auto=format&fit=crop"
-                                class="w-full h-[500px] object-cover group-hover:scale-105 transition-all duration-1000"
-                                alt="Warranty Extension">
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Desktop / AIO Sales</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">High-performance desktops and sleek All-In-One solutions.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">IT Peripherals</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Premium Webcams, ergonomic keyboards, docks, and workspace gear.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-print"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Printer Sales</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">High-yield enterprise printers and multifunction devices.</p>
+                            </div>
+                        </div>
+                        <div class="sticky top-32 lg:pl-10">
+                            <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Enterprise IT Hardware Sales</h2>
+                            <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed text-lg mb-8">Deploy robust and scalable technology with our comprehensive hardware sales. Whether you're purchasing powerful AIO workstations, new laptops, or vital peripherals like printers and webcams, we deliver trusted OEM hardware to keep your operations agile.</p>
+                            <a href="contact.html" class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Get Hardware Quote</a>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 lg:pr-10" data-aos="fade-right">
-                        <div
-                            class="inline-flex items-center justify-center w-20 h-20 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white dark:text-white mb-8   shadow-xl transform -rotate-3">
-                            <i class="fas fa-shield-alt text-3xl transform rotate-3"></i>
+                </div>
+
+                <!-- 3. CCTV / IP CAM Solutions -->
+                <div id="service-cctv" class="service-section hidden">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">CCTV Surveillance</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">State-of-the-art cameras with HD quality and intelligent motion detection.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Energy Management</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Monitor, analyze, and manage energy usage efficiently to reduce costs.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-fire-extinguisher"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Fire Alarm Systems</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Reliable solutions detecting smoke/heat triggering immediate alerts.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">24/7 CMS Monitoring</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Central Monitoring Station services for continuous surveillance & fast intervention.</p>
+                            </div>
                         </div>
-                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
-                            Warranty
-                            Extension</h2>
-                        <ul class="space-y-10 mb-10 relative -l-2  pl-8 ml-4">
-                            <li class="relative">
-                                <div
-                                    class="absolute -left-[45px] top-1 w-6 h-6 rounded-xl bg-white dark:bg-slate-900 -2  dark: flex items-center justify-center shadow-md z-10">
-                                    <div class="w-1.5 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-xl animate-ping">
+                        <div class="sticky top-32 lg:pl-10">
+                            <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Security & Infrastructure</h2>
+                            <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed text-lg mb-8">End-to-end security and infrastructure solutions including high-definition IP cameras, advanced fire alarms, and dedicated round-the-clock CMS monitoring. Optimize energy resources while maintaining an uncompromised blanket of security over your premises.</p>
+                            <a href="contact.html" class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Secure Your Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Networking & Server -->
+                <div id="service-network" class="service-section hidden">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Server Admin Support</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Comprehensive remote & on-site administration to keep critical servers online.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Network Deployment</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Secure LAN/WAN setup, router configurations, and scalable infrastructure.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Resident Engineer</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Dedicated expert stationed at your facility for real-time IT troubleshooting.</p>
+                            </div>
+                            <div class="service-card p-8 flex flex-col justify-between">
+                                <div class="w-16 h-16 rounded-xl service-card-icon flex items-center justify-center mb-8 text-2xl">
+                                    <i class="fas fa-shield-virus"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Network Security</h3>
+                                <p class="text-slate-600 dark:text-gray-300 text-sm font-medium">Enterprise firewall management, threat detection, and prevention systems.</p>
+                            </div>
+                        </div>
+                        <div class="sticky top-32 lg:pl-10">
+                            <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Networking & Server Management</h2>
+                            <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed text-lg mb-8">Maintain peak connectivity and data center performance. We provide robust server administration, dedicated resident engineers for instant support, and enterprise-level network setups that ensure your business stays connected and secure.</p>
+                            <a href="contact.html" class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Optimize Network</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. ITAD Services -->
+                <div id="service-itad" class="service-section hidden">
+                    <div class="flex flex-col lg:flex-row gap-16 items-center">
+                        <div class="lg:w-1/2 relative" data-aos="fade-right">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-green-300 to-cyan-300 rounded-md blur-xl opacity-60 z-0"></div>
+                            <div class="relative overflow-hidden rounded-md shadow-2xl group z-10">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent z-10 mix-blend-overlay"></div>
+                                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-[500px] object-cover group-hover:scale-105 transition-all duration-1000" alt="ITAD Services">
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-10" data-aos="fade-left">
+                            <div class="inline-flex items-center justify-center w-20 h-20 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white mb-8 shadow-xl">
+                                <i class="fas fa-recycle text-3xl text-green-500"></i>
+                            </div>
+                            <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">IT Asset Disposal (ITAD)</h2>
+                            <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed text-lg mb-8">Securely & responsibly retire obsolete IT hardware through proper data wiping, recycling, & disposal. Equipment is handled with care, protecting data & environment every step of the way & refurbished for further re-use.</p>
+                            
+                            <div class="space-y-6 mb-10">
+                                <div class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md shadow-sm group">
+                                    <div class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0">
+                                        <i class="fas fa-eraser text-slate-900 dark:text-white"></i>
                                     </div>
+                                    <span class="text-slate-700 dark:text-gray-200 font-bold tracking-wide">Secure Data Wiping</span>
                                 </div>
-                                <h4 class="text-slate-900 dark:text-white text-xl font-bold mb-2">Extended Hardware
-                                    Coverage</h4>
-                                <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed">Protect your
-                                    high-value IT assets
-                                    long after the OEM warranty expires.</p>
-                            </li>
-                            <li class="relative">
-                                <div
-                                    class="absolute -left-[45px] top-1 w-6 h-6 rounded-xl bg-white dark:bg-slate-900 -2  dark: flex items-center justify-center shadow-md z-10">
-                                    <div
-                                        class="w-2 h-2 bg-slate-200 dark:bg-slate-800 dark:bg-slate-200 dark:bg-slate-800/200 rounded-xl">
+                                <div class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md shadow-sm group">
+                                    <div class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0">
+                                        <i class="fas fa-leaf text-slate-900 dark:text-white"></i>
                                     </div>
+                                    <span class="text-slate-700 dark:text-gray-200 font-bold tracking-wide">Eco-Friendly Recycling</span>
                                 </div>
-                                <h4 class="text-slate-900 dark:text-white text-xl font-bold mb-2">Cost Predictability
-                                </h4>
-                                <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed">Eliminate
-                                    sudden unbudgeted repair
-                                    costs with transparent, fixed pricing.</p>
-                            </li>
-                            <li class="relative">
-                                <div
-                                    class="absolute -left-[45px] top-1 w-6 h-6 rounded-xl bg-white dark:bg-slate-900 -2  dark: flex items-center justify-center shadow-md z-10">
-                                    <div class="w-2 h-2 bg-slate-200 dark:bg-slate-800 rounded-xl"></div>
+                                <div class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md shadow-sm group">
+                                    <div class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0">
+                                        <i class="fas fa-sync text-slate-900 dark:text-white"></i>
+                                    </div>
+                                    <span class="text-slate-700 dark:text-gray-200 font-bold tracking-wide">Refurbishment & Re-use</span>
                                 </div>
-                                <h4 class="text-slate-900 dark:text-white text-xl font-bold mb-2">OEM Standards
-                                    Maintained</h4>
-                                <p class="text-slate-600 dark:text-gray-300 font-medium leading-relaxed">Repairs using
-                                    only premium
-                                    components keeping systems at factory specs.</p>
-                            </li>
-                        </ul>
-                        <a href="https://orarega.com/warranty-extension"
-                            class="btn-solid px-8 py-4 text-xs font-bold inline-block text-white" target="_blank">View
-                            Extension Details</a>
+                            </div>
+                            <a href="contact.html" class="text-slate-900 dark:text-white font-bold hover:text-slate-600 transition-colors">Schedule ITAD Pickup <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Repair Center -->
-                <div class="flex flex-col lg:flex-row gap-16 items-center">
-                    <div class="lg:w-1/2 relative" data-aos="fade-right">
-                        <div
-                            class="absolute -inset-4 bg-gradient-to-r from-cyan-200 to-purple-200 rounded-md blur-xl opacity-60 z-0">
-                        </div>
-                        <div class="relative overflow-hidden rounded-md shadow-2xl group   z-10">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-transparent z-10 mix-blend-overlay">
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=800&auto=format&fit=crop"
-                                class="w-full h-[500px] object-cover group-hover:scale-105 transition-all duration-1000"
-                                alt="Repair Center">
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 lg:pl-10" data-aos="fade-left">
-                        <div
-                            class="inline-flex items-center justify-center w-20 h-20 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white dark:text-white mb-8   shadow-xl transform rotate-3">
-                            <i class="fas fa-tools text-3xl transform -rotate-3"></i>
-                        </div>
-                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
-                            Repair Center</h2>
-                        <p class="text-slate-600 dark:text-gray-300 mb-10 font-medium leading-relaxed text-lg">Send your
-                            damaged equipment
-                            to our highly specialized centralized facility designed for bulk processing and advanced
-                            micro-repairs.</p>
-
-                        <div class="space-y-6 mb-10">
-                            <div
-                                class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md   shadow-sm group hover: dark: hover:shadow-md transition-all cursor-default">
-                                <div
-                                    class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800   flex items-center justify-center shrink-0">
-                                    <i class="fas fa-boxes text-slate-900 dark:text-white dark:text-white"></i>
-                                </div>
-                                <span
-                                    class="text-slate-700 dark:text-gray-200 font-bold tracking-wide transition-colors">Volume
-                                    Processing
-                                    Capability</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md   shadow-sm group hover: dark: hover:shadow-md transition-all cursor-default">
-                                <div
-                                    class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800   flex items-center justify-center shrink-0">
-                                    <i class="fas fa-microscope text-slate-900 dark:text-white dark:text-white"></i>
-                                </div>
-                                <span
-                                    class="text-slate-700 dark:text-gray-200 font-bold tracking-wide transition-colors">Advanced
-                                    Diagnostic Equipment</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-5 bg-white dark:bg-slate-900 p-4 rounded-md   shadow-sm group hover: dark: hover:shadow-md transition-all cursor-default">
-                                <div
-                                    class="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-800   flex items-center justify-center shrink-0">
-                                    <i class="fas fa-truck-loading text-slate-900 dark:text-white dark:text-white"></i>
-                                </div>
-                                <span
-                                    class="text-slate-700 dark:text-gray-200 font-bold tracking-wide transition-colors">Secure
-                                    Shipping
-                                    Logistics</span>
-                            </div>
-                        </div>
-                        <a href="https://orarega.com/repair-depo"
-                            class="text-slate-900 dark:text-white dark:text-white font-bold hover:text-slate-900 dark:text-white dark:text-white transition-colors"
-                            target="_blank">Access Repair Center Portal <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
             </div>
+            
+            <script>
+                function showService(id) {
+                    const sections = document.querySelectorAll('.service-section');
+                    const btns = document.querySelectorAll('.service-btn');
+                    
+                    sections.forEach(s => {
+                        s.classList.add('hidden');
+                        s.classList.remove('animate-fade-in-up');
+                    });
+                    
+                    btns.forEach(b => {
+                        b.classList.remove('bg-blue-600', 'text-white');
+                        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-800', 'dark:text-slate-200');
+                    });
+                    
+                    const activeSection = document.getElementById('service-' + id);
+                    activeSection.classList.remove('hidden');
+                    // re-trigger animation hack
+                    void activeSection.offsetWidth;
+                    activeSection.classList.add('animate-fade-in-up');
+                    
+                    const activeBtn = Array.from(btns).find(b => b.getAttribute('onclick').includes(id));
+                    if (activeBtn) {
+                        activeBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-800', 'dark:text-slate-200');
+                        activeBtn.classList.add('bg-blue-600', 'text-white');
+                    }
+                }
+            </script>
         </div>
-    </section>
-
-
-    <!-- Rich Footer -->
+<!-- Rich Footer -->
     <footer
         class="bg-blue-950 text-white dark:bg-[#020617] pt-16 pb-12 relative overflow-hidden border-t border-slate-800 dark:border-blue-900/50 shadow-[0_-20px_40px_rgba(0,0,0,0.8)]">
 

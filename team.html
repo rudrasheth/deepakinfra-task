@@ -199,7 +199,7 @@
 
         .nav-link {
             position: relative;
-            color: #64748b;
+            color: #cbd5e1;
             font-weight: 600;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
@@ -207,7 +207,7 @@
         }
 
         .nav-link:hover {
-            color: #0f172a;
+            color: #f8fafc;
         }
 
         .dark .nav-link {
@@ -346,11 +346,11 @@
     <!-- Smaller, sleeker navbar -->
     <nav class="fixed w-full z-50 top-4 transition-all duration-300 px-4 sm:px-6 lg:px-8">
         <div
-            class="max-w-6xl mx-auto bg-white dark:bg-slate-900/90 dark:bg-slate-900/90 shadow-sm backdrop-blur-md rounded-xl px-6 h-16 flex justify-between items-center transition-all">
+            class="max-w-6xl mx-auto bg-slate-900/90 shadow-sm backdrop-blur-md rounded-xl px-6 h-16 flex justify-between items-center transition-all">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="index.html">
-                    <img class="h-10 md:h-12 lg:h-16 w-auto brightness-0 dark:invert opacity-80 dark:opacity-100 hover:scale-105 transition-transform"
+                    <img class="h-10 md:h-12 lg:h-16 w-auto invert opacity-100 hover:scale-105 transition-transform"
                         src="assets/dielogo.png" alt="Logo">
                 </a>
             </div>
@@ -358,30 +358,7 @@
             <div class="hidden md:flex space-x-10 items-center">
                 <a href="index.html" class="nav-link uppercase">Home</a>
                 <a href="about.html" class="nav-link uppercase">About</a>
-                <div class="relative group">
-                    <a href="services.html" class="nav-link uppercase flex items-center gap-1">Services <i
-                            class="fas fa-chevron-down text-[10px]"></i></a>
-                    <div
-                        class="absolute left-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col py-2">
-                        <a href="services.html"
-                            class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop
-                            Services</a>
-                        <a href="services.html"
-                            class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop
-                            Spare & Parts</a>
-                        <a href="services.html"
-                            class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop
-                            Repairs</a>
-                        <a href="services.html"
-                            class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Laptop
-                            Repair BGA</a>
-                        <a href="services.html"
-                            class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Data
-                            Recovery</a>
-                        <a href="services.html"
-                            class="px-4 py-2 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800">Media</a>
-                    </div>
-                </div>
+                <a href="services.html" class="nav-link uppercase">Services</a>
                 <a href="team.html" class="nav-link uppercase">Team</a>
                 <a href="contact.html" class="nav-link uppercase">Contact Us</a>
             </div>
@@ -390,14 +367,14 @@
                     class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs shrink-0 font-bold whitespace-nowrap">Get
                     a Free Quote</a>
                 <button id="theme-toggle" onclick="toggleDarkMode()"
-                    class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
+                    class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
                     <i id="theme-toggle-icon" class="fas fa-moon"></i>
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn"
-                class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
