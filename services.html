@@ -512,7 +512,7 @@
                                 provide comprehensive laptop support, prioritizing expert hardware repairs and essential
                                 software solutions. From OS installation, virus removal, and original spare parts, to
                                 complete RAM and SSD upgradations tailored to your workflow.</p>
-                            <a href="contact.html"
+                            <a href="javascript:void(0);" onclick="openQuoteModal('Laptop Services')"
                                 class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Request
                                 Service</a>
                         </div>
@@ -569,7 +569,7 @@
                                 robust and scalable technology with our comprehensive hardware sales. Whether you're
                                 purchasing powerful AIO workstations, new laptops, or vital peripherals like printers
                                 and webcams, we deliver trusted OEM hardware to keep your operations agile.</p>
-                            <a href="contact.html"
+                            <a href="javascript:void(0);" onclick="openQuoteModal('Hardware Sales')"
                                 class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Get Hardware
                                 Quote</a>
                         </div>
@@ -629,7 +629,7 @@
                                 End-to-end security and infrastructure solutions including high-definition IP cameras,
                                 advanced RFID configurations, and biometric access control. Optimize energy resources
                                 while maintaining an uncompromised blanket of security over your premises.</p>
-                            <a href="contact.html"
+                            <a href="javascript:void(0);" onclick="openQuoteModal('CCTV / IP CAM')"
                                 class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Secure Your
                                 Site</a>
                         </div>
@@ -687,7 +687,7 @@
                                 Maintain peak connectivity and data center performance. We provide robust server
                                 administration, dedicated resident engineers for instant support, and enterprise-level
                                 network setups that ensure your business stays connected and secure.</p>
-                            <a href="contact.html"
+                            <a href="javascript:void(0);" onclick="openQuoteModal('Networking')"
                                 class="btn-solid inline-block px-10 py-4 font-bold rounded-lg shadow-lg">Optimize
                                 Network</a>
                         </div>
@@ -753,7 +753,7 @@
                                         & Re-use</span>
                                 </div>
                             </div>
-                            <a href="contact.html"
+                            <a href="javascript:void(0);" onclick="openQuoteModal('ITAD')"
                                 class="text-slate-900 dark:text-white font-bold hover:text-slate-600 transition-colors">Schedule
                                 ITAD Pickup <i class="fas fa-arrow-right ml-2"></i></a>
                         </div>
@@ -949,11 +949,22 @@
         </div>
 
         <script>
-            function openQuoteModal() {
+            function openQuoteModal(serviceOption = null) {
                 const modal = document.getElementById('quoteModal');
                 modal.classList.remove('opacity-0', 'pointer-events-none');
                 modal.querySelector('div').classList.remove('scale-95');
                 modal.querySelector('div').classList.add('scale-100');
+                if (serviceOption) {
+                    const selectElement = modal.querySelector('select');
+                    if (selectElement) {
+                        for (let i = 0; i < selectElement.options.length; i++) {
+                            if (selectElement.options[i].value === serviceOption) {
+                                selectElement.selectedIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                }
             }
 
             function closeQuoteModal() {
