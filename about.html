@@ -42,22 +42,31 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+
     <style>
         :root {
-            --primary: #2563eb; /* Blue 600 */ /* Slate 900 */
+            --primary: #2563eb;
+            /* Blue 600 */
+            /* Slate 900 */
             --primary-rgb: 37, 99, 235;
-            --secondary: #1e40af; /* Blue 800 */ /* Slate 700 */
+            --secondary: #1e40af;
+            /* Blue 800 */
+            /* Slate 700 */
             --glass-bg: rgba(255, 255, 255, 0.75);
         }
+
         .dark {
-            --primary: #60a5fa; /* Blue 400 */ /* Slate 50 */
+            --primary: #60a5fa;
+            /* Blue 400 */
+            /* Slate 50 */
             --primary-rgb: 96, 165, 250;
-            --secondary: #93c5fd; /* Blue 300 */ /* Slate 300 */
+            --secondary: #93c5fd;
+            /* Blue 300 */
+            /* Slate 300 */
             --glass-bg: rgba(30, 41, 59, 0.85);
             color-scheme: dark;
         }
-        
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f8fafc;
@@ -65,24 +74,59 @@
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .dark body { 
-            background-color: #0f172a; 
-            color: #f8fafc; 
+
+        .dark body {
+            background-color: #0f172a;
+            color: #f8fafc;
         }
 
-        .dark .hero-bg, .dark .bg-transparent dark:bg-slate-950, .dark section.bg-transparent dark:bg-slate-950 { background-color: #0f172a !important; }
-        .dark .hero-inner { background-color: rgba(15, 23, 42, 0.85) !important; }
-        .dark .bg-white dark:bg-slate-900 { background-color: #1e293b !important; }
-        .dark .bg-slate-50 dark:bg-slate-800 { background-color: #0f172a !important; }
-        
-        .dark .text-slate-900 dark:text-white { color: #f8fafc !important; }
-        .dark .text-slate-800 dark:text-gray-100 { color: #f1f5f9 !important; }
-        .dark .text-slate-700 dark:text-gray-200 { color: #e2e8f0 !important; }
-        .dark .text-slate-600 dark:text-gray-300 { color: #cbd5e1 !important; }
-        .dark .text-slate-500 { color: #94a3b8 !important; }
-        .dark .text-slate-400 { color: #64748b !important; }
-        
-        .dark .glass-panel { background: var(--glass-bg) !important; border-color: rgba(255,255,255,0.1) !important; }
+        .dark .hero-bg,
+        .dark .bg-transparent dark:bg-slate-950,
+        .dark section.bg-transparent dark:bg-slate-950 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .hero-inner {
+            background-color: rgba(15, 23, 42, 0.85) !important;
+        }
+
+        .dark .bg-white dark:bg-slate-900 {
+            background-color: #1e293b !important;
+        }
+
+        .dark .bg-slate-50 dark:bg-slate-800 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .text-slate-900 dark:text-white {
+            color: #f8fafc !important;
+        }
+
+        .dark .text-slate-800 dark:text-gray-100 {
+            color: #f1f5f9 !important;
+        }
+
+        .dark .text-slate-700 dark:text-gray-200 {
+            color: #e2e8f0 !important;
+        }
+
+        .dark .text-slate-600 dark:text-gray-300 {
+            color: #cbd5e1 !important;
+        }
+
+        .dark .text-slate-500 {
+            color: #94a3b8 !important;
+        }
+
+        .dark .text-slate-400 {
+            color: #64748b !important;
+        }
+
+        .dark .glass-panel {
+            background: var(--glass-bg) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
         .dark .service-card {
             background-color: rgba(30, 41, 59, 0.4) !important;
             backdrop-filter: blur(16px);
@@ -90,7 +134,7 @@
             border-color: rgba(255, 255, 255, 0.08) !important;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .hero-bg {
             position: relative;
             overflow: hidden;
@@ -106,13 +150,18 @@
             animation: slowZoom 20s alternate infinite ease-in-out;
             z-index: 0;
             opacity: 0.8;
-            
+
             will-change: transform;
         }
 
         @keyframes slowZoom {
-            0% { transform: scale(1) translateZ(0); }
-            100% { transform: scale(1.1) translateZ(0); }
+            0% {
+                transform: scale(1) translateZ(0);
+            }
+
+            100% {
+                transform: scale(1.1) translateZ(0);
+            }
         }
 
         .hero-inner {
@@ -128,18 +177,25 @@
             border: 1px solid transparent;
         }
 
-        .btn-solid { 
-            background-color: var(--primary); 
-            color: #ffffff; 
-            transition: all 0.2s ease; 
-            font-weight: 600; 
-            border-radius: 8px; 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
+        .btn-solid {
+            background-color: var(--primary);
+            color: #ffffff;
+            transition: all 0.2s ease;
+            font-weight: 600;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-        .btn-solid:hover { background-color: var(--secondary); opacity: 1; }
-        .dark .btn-solid { color: #0f172a; }
+
+        .btn-solid:hover {
+            background-color: var(--secondary);
+            opacity: 1;
+        }
+
+        .dark .btn-solid {
+            color: #0f172a;
+        }
 
         .nav-link {
             position: relative;
@@ -153,41 +209,52 @@
         .nav-link:hover {
             color: #f8fafc;
         }
-        .dark .nav-link { color: #cbd5e1; }
-        .dark .nav-link:hover { color: #f8fafc; }
 
-        .service-card { 
-            background-color: #ffffff; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); border: 1px solid #e2e8f0; 
-            transition: transform 0.2s, box-shadow 0.2s; 
-            position: relative; 
-            overflow: hidden; 
+        .dark .nav-link {
+            color: #cbd5e1;
         }
+
+        .dark .nav-link:hover {
+            color: #f8fafc;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
         .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
             border-color: rgba(37, 99, 235, 0.3);
         }
 
-        .service-card-icon { 
-            background-color: #f1f5f9; 
-            color: var(--primary); 
-            transition: all 0.2s ease; 
+        .service-card-icon {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            transition: all 0.2s ease;
         }
-        .dark .service-card-icon { 
-            background-color: #1e293b; 
-            color: #f8fafc; 
-            border: 1px solid #334155; 
+
+        .dark .service-card-icon {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #334155;
         }
-        .service-card:hover .service-card-icon { 
-            background-color: var(--primary); 
-            color: #fff; 
-            transform: scale(1.05); 
+
+        .service-card:hover .service-card-icon {
+            background-color: var(--primary);
+            color: #fff;
+            transform: scale(1.05);
         }
-        .dark .service-card:hover .service-card-icon { 
-            background-color: #f8fafc; 
-            color: #0f172a; 
+
+        .dark .service-card:hover .service-card-icon {
+            background-color: #f8fafc;
+            color: #0f172a;
         }
 
         .floating {
@@ -201,14 +268,27 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0px) translateZ(0); }
-            50% { transform: translateY(-20px) translateZ(0); }
-            100% { transform: translateY(0px) translateZ(0); }
+            0% {
+                transform: translateY(0px) translateZ(0);
+            }
+
+            50% {
+                transform: translateY(-20px) translateZ(0);
+            }
+
+            100% {
+                transform: translateY(0px) translateZ(0);
+            }
         }
 
         @keyframes marquee {
-            0% { transform: translateX(0) translateZ(0); }
-            100% { transform: translateX(-50%) translateZ(0); }
+            0% {
+                transform: translateX(0) translateZ(0);
+            }
+
+            100% {
+                transform: translateX(-50%) translateZ(0);
+            }
         }
 
         .animate-marquee {
@@ -248,7 +328,7 @@
         }
         window.addEventListener('DOMContentLoaded', () => {
             updateThemeIcon(document.documentElement.classList.contains('dark'));
-            
+
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileBtn && mobileMenu) {
@@ -270,7 +350,8 @@
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="index.html" class="flex items-center group">
-                    <img class="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform" src="assets/dielogo.png" alt="Logo">
+                    <img class="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform"
+                        src="assets/dielogo.png" alt="Logo">
                 </a>
             </div>
             <!-- Desktop Menu -->
@@ -282,26 +363,33 @@
                 <a href="contact.html" class="nav-link uppercase">Contact Us</a>
             </div>
             <div class="hidden md:flex items-center">
-                <a onclick="openQuoteModal()" href="javascript:void(0);" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs shrink-0 font-bold whitespace-nowrap">Get a Free Quote</a>
-                <button id="theme-toggle" onclick="toggleDarkMode()" class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
-                <i id="theme-toggle-icon" class="fas fa-moon"></i>
+                <a onclick="openQuoteModal()" href="javascript:void(0);"
+                    class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs shrink-0 font-bold whitespace-nowrap">Get
+                    a Free Quote</a>
+                <button id="theme-toggle" onclick="toggleDarkMode()"
+                    class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
+                    <i id="theme-toggle-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
-        
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
-            <i class="fas fa-bars"></i>
-        </button>
-        </div>
-        
+
         <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col space-y-4">
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col space-y-4">
             <a href="index.html" class="nav-link uppercase text-center py-2">Home</a>
             <a href="about.html" class="nav-link uppercase text-center py-2">About</a>
             <a href="services.html" class="nav-link uppercase text-center py-2">Services</a>
             <a href="team.html" class="nav-link uppercase text-center py-2">Team</a>
             <a href="contact.html" class="nav-link uppercase text-center py-2">Contact Us</a>
-            <a onclick="openQuoteModal()" href="javascript:void(0);" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 py-3 text-center w-full font-bold whitespace-nowrap">Get a Free Quote</a>
+            <a onclick="openQuoteModal()" href="javascript:void(0);"
+                class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 py-3 text-center w-full font-bold whitespace-nowrap">Get
+                a Free Quote</a>
         </div>
     </nav>
 
@@ -327,76 +415,91 @@
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-20">
             <div class="lg:w-1/2" data-aos="fade-right">
-                
-                
+
+
                 <div class="space-y-8 mb-10 w-full" data-aos="fade-up">
-                    <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
                                 <i class="fas fa-history"></i>
                             </div>
                             <h3 class="text-2xl font-black text-slate-900 dark:text-white">Brief History</h3>
                         </div>
                         <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed font-medium">
-                            Established in 2012, Deepak Infra-Engineering has evolved from a humble startup into a leading IT service provider. Over time, we've broadened our range of services & earned trust of a loyal client base, thanks to our commitment & expertise.
+                            Established in 2012, Deepak Infra-Engineering has evolved from a humble startup into a
+                            leading IT service provider. Over time, we've broadened our range of services & earned trust
+                            of a loyal client base, thanks to our commitment & expertise.
                         </p>
                     </div>
 
-                    <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
                                 <i class="fas fa-bullseye"></i>
                             </div>
                             <h3 class="text-2xl font-black text-slate-900 dark:text-white">Mission Statement</h3>
                         </div>
                         <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed font-medium">
-                            Our mission is to provide outstanding IT services that boost the efficiency & reliability of our clients’ Tech operations. We're fueled by a commitment to innovation & passion for delivering top-notch results.
+                            Our mission is to provide outstanding IT services that boost the efficiency & reliability of
+                            our clients’ Tech operations. We're fueled by a commitment to innovation & passion for
+                            delivering top-notch results.
                         </p>
                     </div>
 
-                    <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-slate-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
                                 <i class="fas fa-eye"></i>
                             </div>
                             <h3 class="text-2xl font-black text-slate-900 dark:text-white">Vision Section</h3>
                         </div>
                         <p class="text-slate-600 dark:text-gray-300 text-lg leading-relaxed font-medium">
-                            To be the premier provider of essential IT infrastructure solutions across India, recognized for our unwavering reliability, core technical competence, and dedication to client success.
+                            To be the premier provider of essential IT infrastructure solutions across India, recognized
+                            for our unwavering reliability, core technical competence, and dedication to client success.
                         </p>
                     </div>
                 </div>
 
+            </div>
+
+            <div class="lg:w-1/2 relative flex flex-col items-center" data-aos="fade-left" data-aos-delay="200">
                 <div
-                    class="flex items-center gap-12 mt-12 bg-white dark:bg-slate-900 p-8 rounded-xl   w-max shadow-xl shadow-purple-900/5">
-                    <div>
+                    class="aspect-square w-full rounded-md overflow-hidden relative group shadow-[0_20px_50px_rgba(0,0,0,0.15)]  ">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/50 to-transparent z-10 transition-opacity duration-500 opacity-90">
+                    </div>
+                    <img src="assets/team/Deepak Salve Profile.jpg" alt="Deepak Salve"
+                        class="w-full h-full object-cover object-top transition-all duration-1000 scale-105 group-hover:scale-100">
+
+                    <div class="absolute bottom-10 left-10 z-30">
+                        <h3 class="text-4xl font-black text-white mb-2 drop-shadow-2xl">Deepak Salve</h3>
+                        <div
+                            class="text-white font-bold tracking-widest uppercase text-xs drop-shadow-2xl flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-800 animate-pulse"></div>
+                            <span>Owner & Proprietor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-center justify-between w-full mt-8 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-xl shadow-purple-900/5">
+                    <div class="text-center w-1/2">
                         <h4 class="text-5xl font-black text-slate-900 dark:text-white mb-2">10<span
                                 class="text-slate-900 dark:text-white dark:text-white">+</span></h4>
                         <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Years Active</p>
                     </div>
                     <div class="w-px h-16 bg-slate-200"></div>
-                    <div>
+                    <div class="text-center w-1/2">
                         <h4 class="text-5xl font-black text-slate-900 dark:text-white mb-2">2k<span
                                 class="text-slate-900 dark:text-white dark:text-white">+</span>
                         </h4>
                         <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Systems Restored</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
-                <div
-                    class="aspect-square rounded-md overflow-hidden relative group shadow-[0_20px_50px_rgba(0,0,0,0.15)]  ">
-                    <div
-                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/50 to-transparent z-10 transition-opacity duration-500 opacity-90">
-                    </div>
-                    <img src="assets/team/Deepak_Salve_Portrait.png" alt="Deepak Salve"
-                        class="w-full h-full object-cover object-top transition-all duration-1000 scale-105 group-hover:scale-100">
-
-                    <div class="absolute bottom-10 left-10 z-30">
-                        <h3 class="text-4xl font-black text-white mb-2 drop-shadow-2xl">Deepak Salve</h3>
-                        <p class="text-white font-bold tracking-widest uppercase text-xs drop-shadow-2xl flex items-center gap-2">
-                        <div class="w-2 h-2 rounded-xl bg-slate-200 dark:bg-slate-800 animate-pulse"></div> Owner & Proprietor</p>
                     </div>
                 </div>
             </div>
@@ -405,7 +508,9 @@
 
     <!-- New Section: Core Values / Mission -->
     <section class="py-20 bg-white dark:bg-slate-900 relative">
-        <div class="absolute inset-0 bg-[url(\'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop\')] bg-cover bg-fixed bg-center opacity-5 dark:opacity-10 invert dark:invert-0 pointer-events-none z-0"></div>
+        <div
+            class="absolute inset-0 bg-[url(\'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop\')] bg-cover bg-fixed bg-center opacity-5 dark:opacity-10 invert dark:invert-0 pointer-events-none z-0">
+        </div>
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="mb-16 text-center" data-aos="fade-up">
@@ -418,28 +523,37 @@
                     data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-shield-alt text-3xl text-slate-900 dark:text-white mb-6"></i>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Reliability & Trust</h3>
-                    <p class="text-slate-600 dark:text-gray-300 dark:text-slate-400 text-sm leading-relaxed">We understand that your business relies on seamless operations. We prioritize delivering trustworthy, dependable solutions to keep your IT systems secure.</p></p>
+                    <p class="text-slate-600 dark:text-gray-300 dark:text-slate-400 text-sm leading-relaxed">We
+                        understand that your business relies on seamless operations. We prioritize delivering
+                        trustworthy, dependable solutions to keep your IT systems secure.</p>
+                    </p>
                 </div>
 
                 <div class="p-8 border border-slate-200 dark:border-slate-700 dark:border-slate-700 rounded-xl bg-transparent dark:bg-slate-950 dark:bg-slate-800"
                     data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-wrench text-3xl text-slate-900 dark:text-white mb-6"></i>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Expert Repairs</h3>
-                    <p class="text-slate-600 dark:text-gray-300 dark:text-slate-400 text-sm leading-relaxed">Our skilled technicians provide in-depth expertise for all laptop hardware and software repairs, ensuring your devices operate efficiently.</p></p>
+                    <p class="text-slate-600 dark:text-gray-300 dark:text-slate-400 text-sm leading-relaxed">Our skilled
+                        technicians provide in-depth expertise for all laptop hardware and software repairs, ensuring
+                        your devices operate efficiently.</p>
+                    </p>
                 </div>
 
                 <div class="p-8 border border-slate-200 dark:border-slate-700 dark:border-slate-700 rounded-xl bg-transparent dark:bg-slate-950 dark:bg-slate-800"
                     data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-clock text-3xl text-slate-900 dark:text-white mb-6"></i>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Fast Turnaround</h3>
-                    <p class="text-slate-600 dark:text-gray-300 dark:text-slate-400 text-sm leading-relaxed">We know that downtime can impact your work. Our team works efficiently to provide prompt support and quick resolutions to your IT issues.</p>
+                    <p class="text-slate-600 dark:text-gray-300 dark:text-slate-400 text-sm leading-relaxed">We know
+                        that downtime can impact your work. Our team works efficiently to provide prompt support and
+                        quick resolutions to your IT issues.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Rich Footer -->
-    <footer class="bg-blue-950 text-white dark:bg-[#020617] pt-16 pb-12 relative overflow-hidden border-t border-slate-800 dark:border-blue-900/50 shadow-[0_-20px_40px_rgba(0,0,0,0.8)]">
+    <footer
+        class="bg-blue-950 text-white dark:bg-[#020617] pt-16 pb-12 relative overflow-hidden border-t border-slate-800 dark:border-blue-900/50 shadow-[0_-20px_40px_rgba(0,0,0,0.8)]">
 
 
 
@@ -448,12 +562,15 @@
                 <div class="md:col-span-1">
                     <img src="assets/dielogo.png" alt="Logo"
                         class="h-12 md:h-16 lg:h-20 brightness-0 invert opacity-80 dark:opacity-100 mb-6 opacity-80 transition-opacity hover:opacity-100">
-                    <p class="text-sm text-slate-400 font-medium leading-relaxed">Our mission is to provide outstanding IT services that boost the efficiency & reliability of our clients’ Tech operations. We're fueled by a commitment to innovation & passion for delivering top-notch results.</p>
-                    
+                    <p class="text-sm text-slate-400 font-medium leading-relaxed">Our mission is to provide outstanding
+                        IT services that boost the efficiency & reliability of our clients’ Tech operations. We're
+                        fueled by a commitment to innovation & passion for delivering top-notch results.</p>
+
                 </div>
 
                 <div>
-                    <h4 class="text-white dark:text-white font-bold mb-6 text-sm uppercase tracking-widest">Quick Links</h4>
+                    <h4 class="text-white dark:text-white font-bold mb-6 text-sm uppercase tracking-widest">Quick Links
+                    </h4>
                     <div class="flex flex-col gap-3">
                         <a href="index.html"
                             class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
@@ -475,26 +592,31 @@
                 </div>
 
                 <div class="md:col-span-2">
-                        <div class="glass-panel p-8 rounded-xl relative overflow-hidden group bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-lg">
-                            <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-white/5 z-0 group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
-                            <h4 class="text-slate-900 dark:text-white font-bold mb-4 text-xl relative z-10">Our Address</h4>
-                            <div class="flex items-start gap-3 relative z-10 mb-5">
-                                <i class="fas fa-map-marker-alt text-yellow-500 mt-1"></i>
-                                <h4 class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="font-bold text-slate-900 dark:text-white">Deepak Infra Engineering</span><br><span class="font-normal text-slate-600 dark:text-slate-400">D 504, 3rd Floor, Vashi Plaza (Liberty Housing Society), Sector 17,<br>Vashi, Navi Mumbai 400703</span></h4>
-                            </div>
+                    <div
+                        class="glass-panel p-8 rounded-xl relative overflow-hidden group bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-lg">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-white/5 z-0 group-hover:opacity-100 opacity-0 transition-opacity duration-500">
+                        </div>
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-4 text-xl relative z-10">Our Address</h4>
+                        <div class="flex items-start gap-3 relative z-10 mb-5">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mt-1"></i>
+                            <h4 class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span
+                                    class="font-bold text-slate-900 dark:text-white">Deepak Infra
+                                    Engineering</span><br><span class="font-normal text-slate-600 dark:text-slate-400">D
+                                    504, 3rd Floor, Vashi Plaza (Liberty Housing Society), Sector 17,<br>Vashi, Navi
+                                    Mumbai 400703</span></h4>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div
                 class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 pt-8 -t  font-medium tracking-wide">
                 <p>&copy; 2026 Deepak Infra Engineering. All systems nominal.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#"
-                        class="hover:text-white dark:text-white dark:text-white transition-colors">Privacy
+                    <a href="#" class="hover:text-white dark:text-white dark:text-white transition-colors">Privacy
                         Policy</a>
-                    <a href="#"
-                        class="hover:text-white dark:text-white dark:text-white transition-colors">Terms
+                    <a href="#" class="hover:text-white dark:text-white dark:text-white transition-colors">Terms
                         of Service</a>
                 </div>
             </div>
@@ -522,73 +644,92 @@
         }
     </script>
 
-<!-- Quote Modal -->
-<div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
-    <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
-        <button onclick="closeQuoteModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="p-8">
-            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Get a Free Quote</h3>
-            <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.</p>
-            <form class="space-y-4 text-left">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full Name</label>
-                        <input type="text" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Enter your name">
+    <!-- Quote Modal -->
+    <div id="quoteModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
+        <div
+            class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
+            <button onclick="closeQuoteModal()"
+                class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="p-8">
+                <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Get a Free Quote</h3>
+                <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.
+                </p>
+                <form class="space-y-4 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col space-y-1">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full
+                                Name</label>
+                            <input type="text"
+                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm"
+                                placeholder="Enter your name">
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Email
+                                Address</label>
+                            <input type="email"
+                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm"
+                                placeholder="Enter your email">
+                        </div>
                     </div>
                     <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Email Address</label>
-                        <input type="email" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Enter your email">
+                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select
+                            Service</label>
+                        <div class="relative">
+                            <select
+                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm">
+                                <option value="" disabled selected class="text-slate-400">Select...</option>
+                                <option value="Laptop Services">Laptop Services</option>
+                                <option value="Hardware Sales">Hardware Sales</option>
+                                <option value="CCTV / IP CAM">CCTV / IP CAM</option>
+                                <option value="Networking">Networking & Server</option>
+                                <option value="ITAD">ITAD Services</option>
+                            </select>
+                            <i
+                                class="fas fa-chevron-down absolute right-4 top-3.5 text-slate-500 pointer-events-none"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-col space-y-1">
-                    <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select Service</label>
-                    <div class="relative">
-                        <select class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm">
-                            <option value="" disabled selected class="text-slate-400">Select...</option>
-                            <option value="Laptop Services">Laptop Services</option>
-                            <option value="Hardware Sales">Hardware Sales</option>
-                            <option value="CCTV / IP CAM">CCTV / IP CAM</option>
-                            <option value="Networking">Networking & Server</option>
-                            <option value="ITAD">ITAD Services</option>
-                        </select>
-                        <i class="fas fa-chevron-down absolute right-4 top-3.5 text-slate-500 pointer-events-none"></i>
+                    <div class="flex flex-col space-y-1">
+                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your
+                            Requirements</label>
+                        <textarea rows="3"
+                            class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm"
+                            placeholder="Describe your needs..."></textarea>
                     </div>
-                </div>
-                <div class="flex flex-col space-y-1">
-                    <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your Requirements</label>
-                    <textarea rows="3" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Describe your needs..."></textarea>
-                </div>
-                <button type="button" onclick="closeQuoteModal()" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
-                    SUBMIT REQUEST <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
+                    <button type="button" onclick="closeQuoteModal()"
+                        class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
+                        SUBMIT REQUEST <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    function openQuoteModal() {
-        const modal = document.getElementById('quoteModal');
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-    }
-    
-    function closeQuoteModal() {
-        const modal = document.getElementById('quoteModal');
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.querySelector('div').classList.remove('scale-100');
-        modal.querySelector('div').classList.add('scale-95');
-    }
-</script>
+    <script>
+        function openQuoteModal() {
+            const modal = document.getElementById('quoteModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }
+
+        function closeQuoteModal() {
+            const modal = document.getElementById('quoteModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+        }
+    </script>
 
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/919552084097" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-[1rem] flex items-center justify-center text-3xl shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] transition-all z-[100] group" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919552084097" target="_blank"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-[1rem] flex items-center justify-center text-3xl shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] transition-all z-[100] group"
+        aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 
