@@ -1,5 +1,12 @@
 config.php
-# Add other sensitive files here
+# Media & Temporary Files
+*.mp4
+*.png
+*.jpg
+assets/team/
 .env
 vendor/
 node_modules/
+# OS Files
+.DS_Store
+Thumbs.db
