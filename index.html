@@ -91,7 +91,7 @@
         }
 
         .dark .bg-white dark:bg-slate-900 {
-            background-color: #1e293b !important;
+            background-color: #1e292b !important;
         }
 
         .dark .bg-slate-50 dark:bg-slate-800 {
@@ -550,16 +550,87 @@
         </div>
     </section>
 
-    <div class="py-16 bg-white dark:bg-slate-900 text-center flex flex-col items-center -t  relative overflow-hidden">
+    <!-- Brands Section with Draggable Carousel -->
+    <section class="py-8 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 relative z-20 overflow-hidden select-none">
+        <div class="max-w-6xl mx-auto px-4 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing" id="brandSlider">
+            <div class="flex items-center gap-12 md:gap-20 w-max py-2 px-4 border-b border-slate-50 dark:border-slate-900">
+                <!-- Brand items - Compact and High-Impact -->
+                <div class="flex-shrink-0 group">
+                    <i class="fab fa-apple text-6xl text-black dark:text-white transition-transform group-hover:scale-110"></i>
+                </div>
+                <div class="flex-shrink-0 group">
+                    <div class="w-16 h-16 bg-[#0076CE] rounded-full flex items-center justify-center text-white text-lg font-black transition-transform group-hover:scale-110 shadow-md">DELL</div>
+                </div>
+                <div class="flex-shrink-0 group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" class="h-16 w-auto transition-transform group-hover:scale-110 drop-shadow-sm">
+                </div>
+                <div class="flex-shrink-0 group">
+                    <div class="bg-[#E2231A] text-white px-5 py-2 font-black italic tracking-tighter text-2xl leading-none transition-transform group-hover:scale-110 shadow-sm">Lenovo</div>
+                </div>
+                <div class="flex-shrink-0 group">
+                    <span class="text-4xl font-black text-[#83B81A] italic tracking-tighter transition-transform group-hover:scale-110 uppercase">Acer</span>
+                </div>
+                <div class="flex-shrink-0 group">
+                    <span class="text-4xl font-black text-[#00539B] italic tracking-widest transition-transform group-hover:scale-110 uppercase">ASUS</span>
+                </div>
+                <div class="flex-shrink-0 group">
+                    <div class="flex items-center gap-2 text-[#FF0000]">
+                        <i class="fas fa-dragon text-5xl"></i>
+                        <span class="text-3xl font-black italic transition-transform group-hover:scale-110">msi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="relative z-10">
-            <h2 class="text-4xl font-black text-slate-900 dark:text-white mb-6">Need IT repair or maintenance?
-            </h2>
-            <p class="text-slate-500 font-medium mb-10 max-w-lg mx-auto">Get in touch with us today for reliable laptop
-                and hardware repair services.</p>
+    <!-- Draggable Slider Script -->
+    <script>
+        const slider = document.getElementById('brandSlider');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll-fast factor
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // Hide Scrollbar via CSS
+        if (!document.getElementById('scrollbarStyle')) {
+            const style = document.createElement('style');
+            style.id = 'scrollbarStyle';
+            style.innerHTML = `
+                .no-scrollbar::-webkit-scrollbar { display: none; }
+                .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
+
+    <!-- IT Repair CTA Section -->
+    <div class="py-24 bg-[#f8fafc] dark:bg-slate-900 text-center flex flex-col items-center relative overflow-hidden">
+        <div class="relative z-10 w-full max-w-4xl px-4">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Need IT repair or maintenance?</h2>
+            <p class="text-slate-500 dark:text-slate-400 font-medium mb-12 max-w-lg mx-auto text-lg leading-relaxed">Get in touch with us today for reliable laptop and hardware repair services.</p>
             <a href="contact.html"
-                class="btn-solid inline-block px-12 py-5 text-sm font-bold text-white shadow-lg shadow-purple-900/10 hover:text-white">Contact
-                Us Today</a>
+                class="btn-solid inline-block px-12 py-5 text-sm font-bold text-white shadow-xl shadow-blue-900/10 hover:shadow-blue-900/20 transition-all rounded-xl">Contact Us Today</a>
         </div>
     </div>
 
@@ -634,99 +705,64 @@
         </div>
     </footer>
 
-    <!-- Animations Script -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic', offset: 50 });
-
-        const cards = document.querySelectorAll('.service-card');
-        if (cards.length > 0) {
-            document.querySelector('body').addEventListener('mousemove', e => {
-                requestAnimationFrame(() => {
-                    for (const card of cards) {
-                        const rect = card.getBoundingClientRect(),
-                            x = e.clientX - rect.left,
-                            y = e.clientY - rect.top;
-                        card.style.setProperty("--mouse-x", `${x}px`);
-                        card.style.setProperty("--mouse-y", `${y}px`);
-                    }
-                });
-            });
-        }
-    </script>
-
-<!-- Quote Modal -->
-<div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
-    <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
-        <button onclick="closeQuoteModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="p-8">
-            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Get a Free Quote</h3>
-            <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.</p>
-            <form class="space-y-4 text-left">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full Name</label>
-                        <input type="text" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Enter your name">
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="p-8">
+                <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Get a Free Quote</h3>
+                <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.</p>
+                <form id="quoteForm" class="space-y-4 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col space-y-1">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full Name</label>
+                            <input type="text" name="full_name" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Enter your name">
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Email Address</label>
+                            <input type="email" name="email" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Enter your email">
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Mobile Number</label>
+                            <input type="tel" name="mobile" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Enter your mobile number">
+                        </div>
                     </div>
                     <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Email Address</label>
-                        <input type="email" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Enter your email">
+                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select Service</label>
+                        <div class="relative">
+                            <select name="service" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm transition-all">
+                                <option value="" disabled selected class="text-slate-400">Select...</option>
+                                <option value="Laptop Services">Laptop Services</option>
+                                <option value="Hardware Sales">Hardware Sales</option>
+                                <option value="CCTV / IP CAM">CCTV / IP CAM</option>
+                                <option value="Networking">Networking & Server</option>
+                                <option value="ITAD">ITAD Services</option>
+                            </select>
+                            <i class="fas fa-chevron-down absolute right-4 top-3.5 text-slate-500 pointer-events-none"></i>
+                        </div>
                     </div>
                     <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Mobile Number</label>
-                        <input type="tel" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Enter your mobile number">
+                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your Requirements</label>
+                        <textarea name="message" rows="3" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Describe your needs..."></textarea>
                     </div>
-                </div>
-                <div class="flex flex-col space-y-1">
-                    <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select Service</label>
-                    <div class="relative">
-                        <select class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm">
-                            <option value="" disabled selected class="text-slate-400">Select...</option>
-                            <option value="Laptop Services">Laptop Services</option>
-                            <option value="Hardware Sales">Hardware Sales</option>
-                            <option value="CCTV / IP CAM">CCTV / IP CAM</option>
-                            <option value="Networking">Networking & Server</option>
-                            <option value="ITAD">ITAD Services</option>
-                        </select>
-                        <i class="fas fa-chevron-down absolute right-4 top-3.5 text-slate-500 pointer-events-none"></i>
-                    </div>
-                </div>
-                <div class="flex flex-col space-y-1">
-                    <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your Requirements</label>
-                    <textarea rows="3" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Describe your needs..."></textarea>
-                </div>
-                <button type="button" onclick="closeQuoteModal()" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
-                    SUBMIT REQUEST <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
+                    <button type="submit" id="quoteSubmitBtn" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
+                        SUBMIT REQUEST <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div id="formResponse" class="mt-4 p-3 rounded-lg text-sm font-semibold hidden text-center"></div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    function openQuoteModal() {
-        const modal = document.getElementById('quoteModal');
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-    }
-    
-    function closeQuoteModal() {
-        const modal = document.getElementById('quoteModal');
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.querySelector('div').classList.remove('scale-100');
-        modal.querySelector('div').classList.add('scale-95');
-    }
-</script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/919552084097" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-[1rem] flex items-center justify-center text-3xl shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] transition-all z-[100] group" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919552084097" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-[1rem] flex items-center justify-center text-3xl shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] transition-all z-[100] group" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
-
 </html>

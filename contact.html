@@ -46,23 +46,15 @@
     <style>
         :root {
             --primary: #2563eb;
-            /* Blue 600 */
-            /* Slate 900 */
             --primary-rgb: 37, 99, 235;
             --secondary: #1e40af;
-            /* Blue 800 */
-            /* Slate 700 */
             --glass-bg: rgba(255, 255, 255, 0.75);
         }
 
         .dark {
             --primary: #60a5fa;
-            /* Blue 400 */
-            /* Slate 50 */
             --primary-rgb: 96, 165, 250;
             --secondary: #93c5fd;
-            /* Blue 300 */
-            /* Slate 300 */
             --glass-bg: rgba(30, 41, 59, 0.85);
             color-scheme: dark;
         }
@@ -80,61 +72,6 @@
             color: #f8fafc;
         }
 
-        .dark .hero-bg,
-        .dark .bg-transparent dark:bg-slate-950,
-        .dark section.bg-transparent dark:bg-slate-950 {
-            background-color: #0f172a !important;
-        }
-
-        .dark .hero-inner {
-            background-color: rgba(15, 23, 42, 0.85) !important;
-        }
-
-        .dark .bg-white dark:bg-slate-900 {
-            background-color: #1e293b !important;
-        }
-
-        .dark .bg-slate-50 dark:bg-slate-800 {
-            background-color: #0f172a !important;
-        }
-
-        .dark .text-slate-900 dark:text-white {
-            color: #f8fafc !important;
-        }
-
-        .dark .text-slate-800 dark:text-gray-100 {
-            color: #f1f5f9 !important;
-        }
-
-        .dark .text-slate-700 dark:text-gray-200 {
-            color: #e2e8f0 !important;
-        }
-
-        .dark .text-slate-600 dark:text-gray-300 {
-            color: #cbd5e1 !important;
-        }
-
-        .dark .text-slate-500 {
-            color: #94a3b8 !important;
-        }
-
-        .dark .text-slate-400 {
-            color: #64748b !important;
-        }
-
-        .dark .glass-panel {
-            background: var(--glass-bg) !important;
-            border-color: rgba(255, 255, 255, 0.1) !important;
-        }
-
-        .dark .service-card {
-            background-color: rgba(30, 41, 59, 0.4) !important;
-            backdrop-filter: blur(16px);
-            color: #f8fafc !important;
-            border-color: rgba(255, 255, 255, 0.08) !important;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-
         .hero-bg {
             position: relative;
             overflow: hidden;
@@ -150,18 +87,12 @@
             animation: slowZoom 20s alternate infinite ease-in-out;
             z-index: 0;
             opacity: 0.8;
-
             will-change: transform;
         }
 
         @keyframes slowZoom {
-            0% {
-                transform: scale(1) translateZ(0);
-            }
-
-            100% {
-                transform: scale(1.1) translateZ(0);
-            }
+            0% { transform: scale(1) translateZ(0); }
+            100% { transform: scale(1.1) translateZ(0); }
         }
 
         .hero-inner {
@@ -188,13 +119,8 @@
             justify-content: center;
         }
 
-        .btn-solid:hover {
-            opacity: 0.9;
-        }
-
-        .dark .btn-solid {
-            color: #0f172a;
-        }
+        .btn-solid:hover { opacity: 0.9; }
+        .dark .btn-solid { color: #0f172a; }
 
         .nav-link {
             position: relative;
@@ -205,22 +131,12 @@
             transition: color 0.3s ease;
         }
 
-        .nav-link:hover {
-            color: #f8fafc;
-        }
-
-        .dark .nav-link {
-            color: #cbd5e1;
-        }
-
-        .dark .nav-link:hover {
-            color: #f8fafc;
-        }
+        .nav-link:hover { color: #f8fafc; }
 
         .service-card {
             background-color: #ffffff;
             border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
             transition: transform 0.2s, box-shadow 0.2s;
             position: relative;
@@ -233,75 +149,13 @@
             border-color: rgba(37, 99, 235, 0.3);
         }
 
-        .service-card-icon {
-            background-color: #f1f5f9;
-            color: var(--primary);
-            transition: all 0.2s ease;
-        }
-
-        .dark .service-card-icon {
-            background-color: #1e293b;
-            color: #f8fafc;
-            border: 1px solid #334155;
-        }
-
-        .service-card:hover .service-card-icon {
-            background-color: var(--primary);
-            color: #fff;
-            transform: scale(1.05);
-        }
-
-        .dark .service-card:hover .service-card-icon {
-            background-color: #f8fafc;
-            color: #0f172a;
-        }
-
-        .floating {
-            animation: float 6s ease-in-out infinite;
-            will-change: transform;
-        }
-
-        .floating-delayed {
-            animation: float 6s ease-in-out infinite 3s;
-            will-change: transform;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px) translateZ(0);
-            }
-
-            50% {
-                transform: translateY(-20px) translateZ(0);
-            }
-
-            100% {
-                transform: translateY(0px) translateZ(0);
-            }
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0) translateZ(0);
-            }
-
-            100% {
-                transform: translateX(-50%) translateZ(0);
-            }
-        }
-
-        .animate-marquee {
-            display: flex;
-            width: max-content;
-            animation: marquee 20s linear infinite;
-            gap: 4rem;
-            padding-right: 4rem;
-            will-change: transform;
+        .dark .service-card {
+            background-color: rgba(30, 41, 59, 0.4);
+            border-color: rgba(255, 255, 255, 0.08);
         }
     </style>
 
     <script>
-        // Dark Mode Toggle Logic
         const toggleDarkMode = () => {
             document.documentElement.classList.toggle('dark');
             const isDark = document.documentElement.classList.contains('dark');
@@ -320,14 +174,13 @@
                 }
             }
         };
-        if (localStorage.theme === 'dark') {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
         window.addEventListener('DOMContentLoaded', () => {
             updateThemeIcon(document.documentElement.classList.contains('dark'));
-
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileBtn && mobileMenu) {
@@ -339,21 +192,16 @@
     </script>
 </head>
 
-<body
-    class="antialiased selection:bg-slate-200 dark:bg-slate-800 dark:selection:bg-slate-200 dark:bg-slate-800 selection:text-slate-900 dark:text-white dark:selection:text-slate-900 dark:text-white">
+<body class="antialiased selection:bg-slate-200 dark:bg-slate-800 dark:selection:bg-slate-200 selection:text-slate-900 dark:text-white dark:selection:text-slate-900">
 
-    <!-- Smaller, sleeker navbar -->
+    <!-- Navbar -->
     <nav class="fixed w-full z-50 top-4 transition-all duration-300 px-4 sm:px-6 lg:px-8">
-        <div
-            class="max-w-6xl mx-auto bg-slate-900/90 shadow-sm backdrop-blur-md rounded-xl px-6 h-16 flex justify-between items-center transition-all">
-            <!-- Logo -->
+        <div class="max-w-6xl mx-auto bg-slate-900/90 shadow-sm backdrop-blur-md rounded-xl px-6 h-16 flex justify-between items-center transition-all">
             <div class="flex-shrink-0 flex items-center">
                 <a href="index.html" class="flex items-center group">
-                    <img class="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform"
-                        src="assets/dielogo.png" alt="Logo">
+                    <img class="h-10 md:h-12 lg:h-14 w-auto object-contain" src="assets/dielogo.png" alt="Logo">
                 </a>
             </div>
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-10 items-center">
                 <a href="index.html" class="nav-link uppercase">Home</a>
                 <a href="about.html" class="nav-link uppercase">About</a>
@@ -362,287 +210,160 @@
                 <a href="contact.html" class="nav-link uppercase">Contact Us</a>
             </div>
             <div class="hidden md:flex items-center">
-                <a onclick="openQuoteModal()" href="javascript:void(0);"
-                    class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs shrink-0 font-bold whitespace-nowrap">Get
-                    a Free Quote</a>
-                <button id="theme-toggle" onclick="toggleDarkMode()"
-                    class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm">
+                <a onclick="openQuoteModal()" href="javascript:void(0);" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 px-6 py-2 text-xs font-bold whitespace-nowrap rounded-lg">Get a Free Quote</a>
+                <button onclick="toggleDarkMode()" class="ml-4 flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 hover:bg-slate-700 transition-all">
                     <i id="theme-toggle-icon" class="fas fa-moon"></i>
                 </button>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn"
-                class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur text-slate-500 dark:text-slate-300 ml-4">
+            <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 ml-4">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col space-y-4">
-            <a href="index.html" class="nav-link uppercase text-center py-2">Home</a>
-            <a href="about.html" class="nav-link uppercase text-center py-2">About</a>
-            <a href="services.html" class="nav-link uppercase text-center py-2">Services</a>
-            <a href="team.html" class="nav-link uppercase text-center py-2">Team</a>
-            <a href="contact.html" class="nav-link uppercase text-center py-2">Contact Us</a>
-            <a onclick="openQuoteModal()" href="javascript:void(0);"
-                class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 py-3 text-center w-full font-bold whitespace-nowrap">Get
-                a Free Quote</a>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col space-y-4">
+            <a href="index.html" class="nav-link uppercase text-center py-2 text-slate-800 dark:text-gray-100">Home</a>
+            <a href="about.html" class="nav-link uppercase text-center py-2 text-slate-800 dark:text-gray-100">About</a>
+            <a href="services.html" class="nav-link uppercase text-center py-2 text-slate-800 dark:text-gray-100">Services</a>
+            <a href="team.html" class="nav-link uppercase text-center py-2 text-slate-800 dark:text-gray-100">Team</a>
+            <a href="contact.html" class="nav-link uppercase text-center py-2 text-slate-800 dark:text-gray-100">Contact Us</a>
+            <a onclick="openQuoteModal()" href="javascript:void(0);" class="btn-solid !bg-yellow-400 !text-slate-900 py-3 text-center w-full font-bold">Get a Free Quote</a>
         </div>
     </nav>
 
-
-    <!-- Inner Page Header -->
+    <!-- Header Section -->
     <section class="hero-bg pt-40 pb-20 relative overflow-hidden shadow-sm">
         <div class="hero-bg-layer"></div>
         <div class="absolute inset-0 bg-slate-900/50 dark:bg-slate-900/70 z-10 backdrop-blur-sm"></div>
-
-
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center" data-aos="zoom-out">
-            <h1 class="text-5xl lg:text-7xl font-black text-white  mb-4 tracking-tighter">
-                Contact <span class='text-white  '>Us</span></h1>
-            <p class="text-lg text-blue-100 max-w-2xl mx-auto font-medium">Get in touch with us for any inquiries or
-                service requests.</p>
+            <h1 class="text-5xl lg:text-7xl font-black text-white mb-4 tracking-tighter">Contact <span class="text-white">Us</span></h1>
+            <p class="text-lg text-blue-100 max-w-2xl mx-auto font-medium">Get in touch with us for any inquiries or service requests.</p>
         </div>
     </section>
 
+    <!-- Content Section -->
     <section class="min-h-screen py-20 bg-white dark:bg-slate-950 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
             <div class="flex flex-col lg:flex-row gap-16 items-start mt-10">
-                <!-- Left Side: Contact Info -->
-                <div class="lg:w-1/2 relative z-10 space-y-8" data-aos="fade-right">
+                <!-- Contact Info -->
+                <div class="lg:w-1/2 space-y-8" data-aos="fade-right">
                     <div class="flex items-center gap-2 mb-4">
                         <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
                         <span class="text-xs font-bold tracking-widest text-slate-500 uppercase">Contact Us</span>
                     </div>
-
-                    <h2 class="text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">We're here to
-                        help</h2>
-                    <p class="text-slate-500 font-medium leading-relaxed mb-10 max-w-md">Have a question, need a repair,
-                        or just want to know more about our services? Our team is ready to assist you with fast
-                        responses.</p>
-
+                    <h2 class="text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">We're here to help</h2>
+                    <p class="text-slate-500 font-medium leading-relaxed mb-10 max-w-md">Have a question, need a repair, or just want to know more about our services?</p>
                     <div class="space-y-6">
                         <div class="flex items-start gap-5">
-                            <div
-                                class="w-14 h-14 rounded-xl bg-yellow-400/90 text-slate-900 flex items-center justify-center shrink-0 shadow-sm">
-                                <i class="fas fa-phone-alt text-xl"></i>
-                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-yellow-400 text-slate-900 flex items-center justify-center shrink-0 shadow-sm"><i class="fas fa-phone-alt text-xl"></i></div>
                             <div class="flex flex-col pt-1 border-b border-slate-100 dark:border-slate-800 pb-6 w-full">
                                 <span class="text-slate-500 text-sm font-medium mb-1">Contact Us</span>
                                 <h4 class="text-lg font-bold text-slate-900 dark:text-white">9552084097</h4>
-                                
                             </div>
                         </div>
-
                         <div class="flex items-start gap-5">
-                            <div
-                                class="w-14 h-14 rounded-xl bg-yellow-400/90 text-slate-900 flex items-center justify-center shrink-0 shadow-sm">
-                                <i class="far fa-envelope text-xl"></i>
-                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-yellow-400 text-slate-900 flex items-center justify-center shrink-0 shadow-sm"><i class="far fa-envelope text-xl"></i></div>
                             <div class="flex flex-col pt-1 border-b border-slate-100 dark:border-slate-800 pb-6 w-full">
                                 <span class="text-slate-500 text-sm font-medium mb-1">Email Us</span>
-                                <h4 class="text-lg font-bold text-slate-900 dark:text-white">sales@deepakinfraengineering.in
-                                </h4>
+                                <h4 class="text-lg font-bold text-slate-900 dark:text-white">sales@deepakinfraengineering.in</h4>
                             </div>
                         </div>
-
                         <div class="flex items-start gap-5">
-                            <div
-                                class="w-14 h-14 rounded-xl bg-yellow-400/90 text-slate-900 flex items-center justify-center shrink-0 shadow-sm">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div class="flex flex-col pt-1 w-full relative -top-1">
+                            <div class="w-14 h-14 rounded-xl bg-yellow-400 text-slate-900 flex items-center justify-center shrink-0 shadow-sm"><i class="fas fa-map-marker-alt text-xl"></i></div>
+                            <div class="flex flex-col pt-1 w-full relative">
                                 <span class="text-slate-500 text-sm font-medium mb-2">Location</span>
-                                <h4 class="text-lg text-slate-900 dark:text-white leading-relaxed"><span
-                                        class="font-bold">Deepak Infra Engineering</span><br><span class="font-normal">D
-                                        504, 3rd Floor, Vashi Plaza (Liberty Housing Society), Sector 17, Vashi, Navi
-                                        Mumbai 400703</span></h4>
+                                <h4 class="text-lg text-slate-900 dark:text-white leading-relaxed font-bold">Deepak Infra Engineering</h4>
+                                <p class="text-sm text-slate-500">D 504, 3rd Floor, Vashi Plaza, Sector 17, Vashi, Navi Mumbai 400703</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right Side: Contact Form -->
-                <div class="lg:w-1/2 relative z-10 w-full" data-aos="fade-left" data-aos-delay="200">
-                    <div
-                        class="bg-[#faf9f6] dark:bg-slate-900 border border-transparent dark:border-slate-800 p-10 lg:p-12 rounded-[2rem] shadow-sm relative h-full flex flex-col justify-center">
-                        <h3 class="text-4xl font-black text-slate-900 dark:text-white mb-8 tracking-tight">Get in touch
-                            today</h3>
-
-                        <form class="space-y-5">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                    <div class="bg-[#faf9f6] dark:bg-slate-900 border border-transparent dark:border-slate-800 p-10 rounded-[2rem] shadow-sm relative">
+                        <h3 class="text-4xl font-black text-slate-900 dark:text-white mb-8 tracking-tight">Get in touch today</h3>
+                        <form id="contactForm" class="space-y-5">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <input type="text" id="first_name"
-                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 dark:text-white font-medium shadow-sm transition-shadow"
-                                    placeholder="First Name">
-                                <input type="text" id="last_name"
-                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 dark:text-white font-medium shadow-sm transition-shadow"
-                                    placeholder="Last Name">
+                                <input type="text" name="full_name" required class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:ring-2 focus:ring-yellow-400 outline-none dark:text-white" placeholder="Full Name">
+                                <input type="email" name="email" required class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:ring-2 focus:ring-yellow-400 outline-none dark:text-white" placeholder="Email Address">
                             </div>
-
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <input type="email" id="email"
-                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 dark:text-white font-medium shadow-sm transition-shadow"
-                                    placeholder="Email">
-                                <input type="tel" id="phone"
-                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 dark:text-white font-medium shadow-sm transition-shadow"
-                                    placeholder="Phone">
+                                <input type="tel" name="mobile" required class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:ring-2 focus:ring-yellow-400 outline-none dark:text-white" placeholder="Phone Number">
+                                <input type="text" name="service" class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:ring-2 focus:ring-yellow-400 outline-none dark:text-white" placeholder="Service Needed">
                             </div>
-
-                            <textarea id="message" rows="4"
-                                class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none text-slate-900 dark:text-white font-medium shadow-sm transition-shadow"
-                                placeholder="Message"></textarea>
-
-                            <button type="submit"
-                                class="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-xl py-4 text-sm font-bold tracking-wide transition-colors shadow-sm">
-                                Send Message
+                            <textarea name="message" rows="4" required class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-3.5 focus:ring-2 focus:ring-yellow-400 outline-none resize-none dark:text-white" placeholder="Message"></textarea>
+                            <button type="submit" id="contactSubmitBtn" class="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-xl py-4 text-sm font-bold tracking-wide transition-colors flex items-center justify-center gap-2">
+                                Send Message <i class="fas fa-paper-plane"></i>
                             </button>
+                            <div id="contactResponse" class="mt-4 p-3 rounded-lg text-sm font-semibold hidden text-center"></div>
                         </form>
                     </div>
                 </div>
             </div>
-
-            <!-- Google Maps Full Width below -->
-            <div class="mt-20 w-full relative z-10" data-aos="fade-up">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8315185361372!2d72.99723231535737!3d19.071110057081702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1340b080001%3A0xe104db149021e1!2sVashi%20Plaza%20(VP)!5e0!3m2!1sen!2sin!4v1714415849065!5m2!1sen!2sin"
-                    width="100%" height="450"
-                    style="border:0; border-radius: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Google Maps -->
+            <div class="mt-20 w-full" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8315185361372!2d72.99723231535737!3d19.071110057081702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1340b080001%3A0xe104db149021e1!2sVashi%20Plaza%20(VP)!5e0!3m2!1sen!2sin!4v1714415849065!5m2!1sen!2sin" width="100%" height="450" style="border:0; border-radius: 2rem; box-shadow: 0 10px 15px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-
-    <!-- Rich Footer -->
-    <footer
-        class="bg-blue-950 text-white dark:bg-[#020617] pt-16 pb-12 relative overflow-hidden border-t border-slate-800 dark:border-blue-900/50 shadow-[0_-20px_40px_rgba(0,0,0,0.8)]">
-
-
-
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white dark:bg-[#020617] pt-16 pb-12 relative overflow-hidden border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="fade-up">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
-                    <img src="assets/dielogo.png" alt="Logo"
-                        class="h-12 md:h-16 lg:h-20 brightness-0 invert opacity-80 dark:opacity-100 mb-6 opacity-80 transition-opacity hover:opacity-100">
-                    <p class="text-sm text-slate-400 font-medium leading-relaxed">Our mission is to provide outstanding
-                        IT services that boost the efficiency & reliability of our clients’ Tech operations. We're
-                        fueled by a commitment to innovation & passion for delivering top-notch results.</p>
+                    <img src="assets/dielogo.png" alt="Logo" class="h-12 brightness-0 invert opacity-80 mb-6">
+                    <p class="text-sm text-slate-400 leading-relaxed">Our mission is to provide outstanding IT services that boost the efficiency & reliability of our clients’ Tech operations.</p>
                 </div>
-
                 <div>
-                    <h4 class="text-white dark:text-white font-bold mb-6 text-sm uppercase tracking-widest">Quick Links
-                    </h4>
+                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Quick Links</h4>
                     <div class="flex flex-col gap-3">
-                        <a href="index.html"
-                            class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
-                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0"></i>
-                            Home</a>
-                        <a href="about.html"
-                            class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
-                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0"></i>
-                            About Us</a>
-                        <a href="services.html"
-                            class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
-                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0"></i>
-                            Services</a>
-                        <a href="contact.html"
-                            class="text-slate-400 hover:text-white dark:text-white dark:text-white font-medium text-sm transition-colors w-fit flex items-center gap-2 group"><i
-                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0"></i>
-                            Contact Us</a>
+                        <a href="index.html" class="text-slate-400 hover:text-white text-sm transition-colors">Home</a>
+                        <a href="about.html" class="text-slate-400 hover:text-white text-sm transition-colors">About Us</a>
+                        <a href="services.html" class="text-slate-400 hover:text-white text-sm transition-colors">Services</a>
+                        <a href="contact.html" class="text-slate-400 hover:text-white text-sm transition-colors">Contact Us</a>
                     </div>
                 </div>
-
-                                <div class="md:col-span-2">
-                    <div class="glass-panel p-8 rounded-xl relative overflow-hidden group bg-slate-900/50 dark:bg-slate-800/50 border border-slate-700 shadow-lg">
-                        <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-white/5 z-0 group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
-                        <h4 class="text-white dark:text-white font-bold mb-4 text-xl relative z-10">Our Address</h4>
-                        <div class="flex items-start gap-3 relative z-10 mb-5">
-                            <i class="fas fa-map-marker-alt text-blue-400 mt-1"></i>
-                            <h4 class="text-sm text-slate-300 dark:text-slate-300 leading-relaxed"><span class="font-bold text-white dark:text-white">Deepak Infra Engineering</span><br><span class="font-normal text-slate-400 dark:text-slate-400">D 504, 3rd Floor, Vashi Plaza (Liberty Housing Society), Sector 17,<br>Vashi, Navi Mumbai 400703</span></h4>
-                        </div>
-                        <div class="relative z-10 mt-6 pt-6 border-t border-slate-700 dark:border-slate-700">
-                            <a href="contact.html" class="btn-solid inline-block px-8 py-3 text-sm font-bold w-full text-center text-white rounded bg-blue-600 hover:bg-blue-700 transition">Contact Us</a>
-                        </div>
+                <div class="md:col-span-2">
+                    <div class="glass-panel p-8 rounded-xl bg-slate-900/50 border border-slate-700">
+                        <h4 class="text-white font-bold mb-4 text-xl">Our Address</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed"><span class="font-bold text-white">Deepak Infra Engineering</span><br>D 504, 3rd Floor, Vashi Plaza, Sector 17, Vashi, Navi Mumbai 400703</p>
                     </div>
                 </div>
             </div>
-
-                                                <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 pt-8 font-medium tracking-wide border-t border-slate-800/50 mt-12">
-                <div>
-                    <p>&copy; 2026 Deepak Infra Engineering. All systems nominal.</p>
-                    <div class="flex gap-4 mt-2">
-                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                    </div>
-                </div>
-                <div class="flex items-center mt-6 md:mt-0 text-slate-400 font-semibold group">
-                    <span>Crafted by: </span>
-                    <a href="https://www.njinfotechs.com" target="_blank" class="ml-1 text-slate-300 hover:text-blue-400 transition-colors">NJ-Info Tech Solutions</a>
-                </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 pt-8 border-t border-slate-800/50 mt-12">
+                <p>&copy; 2026 Deepak Infra Engineering. All systems nominal.</p>
+                <div class="mt-4 md:mt-0"><span>Crafted by: </span><a href="https://www.njinfotechs.com" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors">NJ-Info Tech Solutions</a></div>
             </div>
         </div>
     </footer>
 
-    <!-- Animations Script -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic', offset: 50 });
-
-        const cards = document.querySelectorAll('.service-card');
-        document.querySelector('body').onmousemove = e => {
-            for (const card of cards) {
-                const rect = card.getBoundingClientRect(),
-                    x = e.clientX - rect.left,
-                    y = e.clientY - rect.top;
-                card.style.setProperty("--mouse-x", `${x}px`);
-                card.style.setProperty("--mouse-y", `${y}px`);
-            }
-        };
-    </script>
-
     <!-- Quote Modal -->
-    <div id="quoteModal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
-        <div
-            class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
-            <button onclick="closeQuoteModal()"
-                class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
+    <div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
                 <i class="fas fa-times"></i>
             </button>
             <div class="p-8">
                 <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Get a Free Quote</h3>
-                <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.
-                </p>
-                <form class="space-y-4 text-left">
+                <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.</p>
+                <form id="quoteForm" class="space-y-4 text-left">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="flex flex-col space-y-1">
-                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full
-                                Name</label>
-                            <input type="text"
-                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm"
-                                placeholder="Enter your name">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full Name</label>
+                            <input type="text" name="full_name" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Enter your name">
                         </div>
                         <div class="flex flex-col space-y-1">
-                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Email
-                                Address</label>
-                            <input type="email"
-                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm"
-                                placeholder="Enter your email">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Email Address</label>
+                            <input type="email" name="email" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Enter your email">
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Mobile Number</label>
+                            <input type="tel" name="mobile" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Enter your mobile number">
+                        </div>
                     </div>
                     <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Mobile Number</label>
-                        <input type="tel" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white font-medium shadow-sm" placeholder="Enter your mobile number">
-                    </div>
-                </div>
-                    <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select
-                            Service</label>
+                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select Service</label>
                         <div class="relative">
-                            <select
-                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm">
+                            <select name="service" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm transition-all">
                                 <option value="" disabled selected class="text-slate-400">Select...</option>
                                 <option value="Laptop Services">Laptop Services</option>
                                 <option value="Hardware Sales">Hardware Sales</option>
@@ -650,50 +371,31 @@
                                 <option value="Networking">Networking & Server</option>
                                 <option value="ITAD">ITAD Services</option>
                             </select>
-                            <i
-                                class="fas fa-chevron-down absolute right-4 top-3.5 text-slate-500 pointer-events-none"></i>
+                            <i class="fas fa-chevron-down absolute right-4 top-3.5 text-slate-500 pointer-events-none"></i>
                         </div>
                     </div>
                     <div class="flex flex-col space-y-1">
-                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your
-                            Requirements</label>
-                        <textarea rows="3"
-                            class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm"
-                            placeholder="Describe your needs..."></textarea>
+                        <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your Requirements</label>
+                        <textarea name="message" rows="3" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Describe your needs..."></textarea>
                     </div>
-                    <button type="button" onclick="closeQuoteModal()"
-                        class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
+                    <button type="submit" id="quoteSubmitBtn" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
                         SUBMIT REQUEST <i class="fas fa-paper-plane"></i>
                     </button>
+                    <div id="formResponse" class="mt-4 p-3 rounded-lg text-sm font-semibold hidden text-center"></div>
                 </form>
             </div>
         </div>
     </div>
 
-    <script>
-        function openQuoteModal() {
-            const modal = document.getElementById('quoteModal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.querySelector('div').classList.remove('scale-95');
-            modal.querySelector('div').classList.add('scale-100');
-        }
-
-        function closeQuoteModal() {
-            const modal = document.getElementById('quoteModal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.querySelector('div').classList.remove('scale-100');
-            modal.querySelector('div').classList.add('scale-95');
-        }
-    </script>
-
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/919552084097" target="_blank"
-        class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-[1rem] flex items-center justify-center text-3xl shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] transition-all z-[100] group"
-        aria-label="WhatsApp">
+    <a href="https://wa.me/919552084097" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-[1rem] flex items-center justify-center text-3xl shadow-[0_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(37,211,102,0.4)] transition-all z-[100] group" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
 </body>
-
+</html>
+</body>
 </html>
