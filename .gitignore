@@ -1,11 +1,15 @@
 config.php
 # Media & Temporary Files
 *.mp4
-# Keep assets/ folder images
+# Keep assets/ and img/ folder images
 !assets/**/*.png
 !assets/**/*.jpg
 !assets/**/*.webp
 !assets/**/*.svg
+!img/*.png
+!img/*.jpg
+!img/*.webp
+!img/*.svg
 assets/team/
 .env
 vendor/
