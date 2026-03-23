@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Infra Engineering | IT Repair & Services</title>
+    <title>Deepak Infra Engineering | IT Repair & Services - Vashi, Navi Mumbai</title>
+    <meta name="description" content="Expert IT repair and engineering services in Vashi, Navi Mumbai. Specailizing in laptops, hardware sales, CCTV, and networking infrastructure.">
+    <meta name="keywords" content="IT repair Vashi, Laptop service Navi Mumbai, CCTV installation Vashi, Hardware sales Navi Mumbai">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/dielogo.png">
      <!-- Tailwind CSS -->
@@ -550,80 +552,81 @@
         </div>
     </section>
 
-    <!-- Brands Section with Draggable Carousel -->
-    <section class="py-8 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 relative z-20 overflow-hidden select-none">
-        <div class="max-w-6xl mx-auto px-4 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing" id="brandSlider">
-            <div class="flex items-center gap-12 md:gap-20 w-max py-2 px-4 border-b border-slate-50 dark:border-slate-900">
-                <!-- Brand items - Compact and High-Impact -->
-                <div class="flex-shrink-0 group">
-                    <i class="fab fa-apple text-6xl text-black dark:text-white transition-transform group-hover:scale-110"></i>
-                </div>
-                <div class="flex-shrink-0 group">
-                    <div class="w-16 h-16 bg-[#0076CE] rounded-full flex items-center justify-center text-white text-lg font-black transition-transform group-hover:scale-110 shadow-md">DELL</div>
-                </div>
-                <div class="flex-shrink-0 group">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" class="h-16 w-auto transition-transform group-hover:scale-110 drop-shadow-sm">
-                </div>
-                <div class="flex-shrink-0 group">
-                    <div class="bg-[#E2231A] text-white px-5 py-2 font-black italic tracking-tighter text-2xl leading-none transition-transform group-hover:scale-110 shadow-sm">Lenovo</div>
-                </div>
-                <div class="flex-shrink-0 group">
-                    <span class="text-4xl font-black text-[#83B81A] italic tracking-tighter transition-transform group-hover:scale-110 uppercase">Acer</span>
-                </div>
-                <div class="flex-shrink-0 group">
-                    <span class="text-4xl font-black text-[#00539B] italic tracking-widest transition-transform group-hover:scale-110 uppercase">ASUS</span>
-                </div>
-                <div class="flex-shrink-0 group">
-                    <div class="flex items-center gap-2 text-[#FF0000]">
-                        <i class="fas fa-dragon text-5xl"></i>
-                        <span class="text-3xl font-black italic transition-transform group-hover:scale-110">msi</span>
-                    </div>
-                </div>
+<section class="bg-white">
+
+    <!-- Tight but not too small -->
+    <div class="px-8 w-full flex items-center h-24">
+
+        <div class="flex items-center justify-between w-full">
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/accer.png" class="h-12 object-contain">
             </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/hp-1.webp" class="h-16 object-contain">
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/hcl.png" class="h-12 object-contain">
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/lenovo.webp" class="h-12 object-contain">
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/msi.webp" class="h-12 object-contain">
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/asus.png" class="h-12 object-contain">
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/apple.png" class="h-16 object-contain">
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <img src="img/dell.webp" class="h-12 object-contain">
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+<script>
+const slider = document.getElementById('slider');
 
-    <!-- Draggable Slider Script -->
-    <script>
-        const slider = document.getElementById('brandSlider');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+let isDown = false;
+let startX;
+let scrollLeft;
 
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.style.cursor = 'grabbing';
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-            slider.style.cursor = 'grab';
-        });
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.style.cursor = 'grab';
-        });
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2; // Scroll-fast factor
-            slider.scrollLeft = scrollLeft - walk;
-        });
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX;
+    scrollLeft = slider.scrollLeft;
+});
 
-        // Hide Scrollbar via CSS
-        if (!document.getElementById('scrollbarStyle')) {
-            const style = document.createElement('style');
-            style.id = 'scrollbarStyle';
-            style.innerHTML = `
-                .no-scrollbar::-webkit-scrollbar { display: none; }
-                .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-            `;
-            document.head.appendChild(style);
-        }
-    </script>
+slider.addEventListener('mouseup', () => isDown = false);
+slider.addEventListener('mouseleave', () => isDown = false);
 
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const walk = (e.pageX - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+});
+</script>
+<style>
+#slider {
+    overflow-x: auto;
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE */
+}
+#slider::-webkit-scrollbar {
+    display: none;               /* Chrome */
+}
+</style>
     <!-- IT Repair CTA Section -->
     <div class="py-24 bg-[#f8fafc] dark:bg-slate-900 text-center flex flex-col items-center relative overflow-hidden">
         <div class="relative z-10 w-full max-w-4xl px-4">
@@ -708,13 +711,14 @@
     <!-- Quote Modal -->
     <div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 left-0 top-0 w-full h-full">
         <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden transform scale-95 transition-transform duration-300 mx-4">
-            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
+            <button onclick="window.closeQuoteModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 hover:text-slate-800 dark:hover:text-white transition-colors z-10">
                 <i class="fas fa-times"></i>
             </button>
             <div class="p-8">
                 <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Get a Free Quote</h3>
                 <p class="text-slate-500 font-medium mb-8">Fill out the form below and we'll get back to you shortly.</p>
                 <form id="quoteForm" class="space-y-4 text-left">
+                    <input type="hidden" name="form_type" value="Quote Request">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="flex flex-col space-y-1">
                             <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Full Name</label>
@@ -732,7 +736,7 @@
                     <div class="flex flex-col space-y-1">
                         <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Select Service</label>
                         <div class="relative">
-                            <select name="service" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm transition-all">
+                            <select name="service" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white appearance-none cursor-pointer font-medium shadow-sm transition-all">
                                 <option value="" disabled selected class="text-slate-400">Select...</option>
                                 <option value="Laptop Services">Laptop Services</option>
                                 <option value="Hardware Sales">Hardware Sales</option>
@@ -745,12 +749,13 @@
                     </div>
                     <div class="flex flex-col space-y-1">
                         <label class="text-slate-700 dark:text-slate-300 text-sm font-bold tracking-wide">Your Requirements</label>
-                        <textarea name="message" rows="3" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Describe your needs..."></textarea>
+                        <textarea name="message" required rows="3" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 dark:text-white font-medium shadow-sm transition-all" placeholder="Describe your needs..."></textarea>
                     </div>
                     <button type="submit" id="quoteSubmitBtn" class="btn-solid !bg-yellow-400 hover:!bg-yellow-500 !text-slate-900 w-full py-3.5 text-sm tracking-widest font-bold flex items-center justify-center gap-2 mt-4 rounded-lg shadow-md transition-all">
                         SUBMIT REQUEST <i class="fas fa-paper-plane"></i>
                     </button>
-                    <div id="formResponse" class="mt-4 p-3 rounded-lg text-sm font-semibold hidden text-center"></div>
+                    <!-- Response Message Container -->
+                    <div id="quoteResponse" class="hidden"></div>
                 </form>
             </div>
         </div>
